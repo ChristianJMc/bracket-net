@@ -7,3 +7,6 @@ data/
 runs/*.log
 .claude/
 .vercel
+
+.vercel
+.env*
