@@ -1,0 +1,9 @@
+node_modules/
+# Downloaded third-party files (box scores, Kaggle CSVs, ESPN responses, coach pages, weather): not ours to
+# redistribute. The pipeline re-downloads them; sources/lock.json records the hash each one must match.
+raw/
+# Everything built from those files. `node build/pipeline.js --full` rebuilds it.
+data/
+runs/*.log
+.claude/
+.vercel

@@ -1,0 +1,713 @@
+{
+ "about": "SHA-256 of every downloaded input. build/pipeline.js verifies these before building.",
+ "files": {
+  "raw/coaches/2006-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2006-coaches.html",
+   "sha256": "74d6b48bdd545c95ca672e89fbce601646628e26c40b333574582991724f988e",
+   "bytes": 701464,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2007-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2007-coaches.html",
+   "sha256": "e460bc90c3370a6767a6b746b82fd3731e76a433244f96c17e5daaf5e2e8e8ee",
+   "bytes": 706361,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2008-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2008-coaches.html",
+   "sha256": "ef4e384c123c3685ff039129fcb458bfd5d677314bd8ab6cd09c78609863bd45",
+   "bytes": 728247,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2009-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2009-coaches.html",
+   "sha256": "9abb0c59f7ba2054de33754a09d2dd27e676e3f541151e4a89000aba52d75b07",
+   "bytes": 725181,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2010-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2010-coaches.html",
+   "sha256": "f1d2d6e9c1ebcde139574459e4b0662815a1c4e728185ba84e15fbe664ee433e",
+   "bytes": 731219,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2011-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2011-coaches.html",
+   "sha256": "6f142d33b73de262cea853dce105d6de5c042ff397f066f7eb2983f62a745a92",
+   "bytes": 722245,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2012-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2012-coaches.html",
+   "sha256": "c045e492a961acdf1ae6ee74f49bf3742f970526240d33b3a464e14b17662d86",
+   "bytes": 726879,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2013-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2013-coaches.html",
+   "sha256": "2ecdfb951d9b38885cb33a6a900d33cbbf31f4910a58233719d183fc04129ff9",
+   "bytes": 731384,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2014-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2014-coaches.html",
+   "sha256": "64db5c7b5e82efba63b2cc85eca9cb8138c9980d3656c3190e16c2ec715d4409",
+   "bytes": 734226,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2015-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2015-coaches.html",
+   "sha256": "10fbe78021ac23f0d64a80d992f16890cbb321534da227be64c13d3326993669",
+   "bytes": 732742,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2016-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2016-coaches.html",
+   "sha256": "40f57620daf160dbedb104f865e9837728ffbfe9554b9e6183018a5bde388ca6",
+   "bytes": 740258,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2017-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2017-coaches.html",
+   "sha256": "cef6d48d8fe439f1f0b17772668bc87664c09f6170927c6253a25cd41fd66de1",
+   "bytes": 735869,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2018-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2018-coaches.html",
+   "sha256": "216d2c54d1d89e0e73e47d12c12835684a89fe21f9145deab57c25c6bdb9f929",
+   "bytes": 747185,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2019-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2019-coaches.html",
+   "sha256": "4cc367c0c74b497ed99e3a3a03c22eee3737d6b337f0f22a35d1fa063e34c26a",
+   "bytes": 736093,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2020-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2020-coaches.html",
+   "sha256": "b4526071b96936791cad76d1b59a7fc880f39e1bd156618a4878cd26d3ce9286",
+   "bytes": 747058,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2021-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2021-coaches.html",
+   "sha256": "b9f8bcda276f35d847573145f07047860e1c708932966f47769fd3514b139a34",
+   "bytes": 745407,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2022-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2022-coaches.html",
+   "sha256": "1a43485ff7b2d3224ade54aa00a4ef29dd2c383273a5032bbb5acbc42762597a",
+   "bytes": 757904,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2023-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2023-coaches.html",
+   "sha256": "b9ec94d6578a5ee6645b2734b1d220065071242e0668b97c09674b24f66c835c",
+   "bytes": 768696,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2024-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2024-coaches.html",
+   "sha256": "0c954e5ccb510b67317d09240c7a3cc522350f647bbcb88e130db85dc8d0853d",
+   "bytes": 762802,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2025-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2025-coaches.html",
+   "sha256": "ad4f627f8f2735eb312447f92a0822a3fce74f639a33ab600023e351ca1d7bd2",
+   "bytes": 762562,
+   "pinned": "2026-11-07"
+  },
+  "raw/coaches/2026-coaches.html": {
+   "url": "https://www.sports-reference.com/cbb/seasons/men/2026-coaches.html",
+   "sha256": "75531026934739b67b7ce4860cffabae87c4ed1376671fc88de5528b7bddc64e",
+   "bytes": 757977,
+   "pinned": "2026-11-07"
+  },
+  "raw/kaggle/csv/538 Ratings.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "e7205e4fba582aafe51f68bfbd447d02868f1139069a7803f8a3380aa0076878",
+   "bytes": 18786,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/AP Poll Data.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "2358449ff46776ddad5631ac7e81058cc392d30b39990173f2b1dc91437cd3ba",
+   "bytes": 619293,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Barttorvik Away-Neutral.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "04bb1ded90f6bc52f0ddd4485c25a0286e5de7deccf431e2467254ca0706cb07",
+   "bytes": 446208,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Barttorvik Away.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "6a75d87c47b17579df582f8883dd659c99734686ad77fca2b5339ac1dcd09ef6",
+   "bytes": 446067,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Barttorvik Home.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "88b344a8205d3e04d272ebbe086b77241b65f963de4b7f5e88528a621d9c277b",
+   "bytes": 448434,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Barttorvik Neutral.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "dc869a0111604cb6c53044c77e05abed1876bccde7aaf777f18dceecff6de3a6",
+   "bytes": 444435,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Coach Results.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "87d7ee4ba118f9c95c54619445ff858f135fa0c3ef848215f87709c96e8a9c5c",
+   "bytes": 24000,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Conference Results.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "193a01ac780e5bd170fef33aee727a4b46307d01d16a7b72ddf14fa677e3f8c2",
+   "bytes": 2036,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Conference Stats Away Neutral.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "55d4f9a2ffe05e3150beb876e653a9bc1b2e57921c59850021fda027706d2f7d",
+   "bytes": 133469,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Conference Stats Away.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "28fbf3adf43dd7651cc1a266e99d36948cfff9c0abbd882af9b6a8c06198d79c",
+   "bytes": 133469,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Conference Stats Home.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "769784bfc02d01581de3d14889ee0a22e62e034419259507af68f3c48c623449",
+   "bytes": 132655,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Conference Stats Neutral.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "89fd70a23df39d9bda09aa4043d81effce0329c4b1239cb73dc4461fb6027865",
+   "bytes": 130591,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Conference Stats.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "26c30d697c9fa575c029dc11bddd1776aafcfab15902a2197ca363dfd95e107a",
+   "bytes": 134399,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/EvanMiya.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "b4b3f1ccd6f508095f9431318330af79266ce61fc7d873e8d52df55e76a412fe",
+   "bytes": 149629,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Heat Check Ratings.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "8d3803f0d6ddce095a6f489fce11443b55665c8ba23c8be229032b48805b8058",
+   "bytes": 17859,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Heat Check Tournament Index.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "fa1fc68b68da9961a6cda8153ecabb07087014ea99863901f13d57d518ddcee6",
+   "bytes": 51387,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/KenPom Barttorvik.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "96214f6f583bd504e9e172e79ba374c729675e31b19be936f927d2ba59264b86",
+   "bytes": 558116,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/KenPom Preseason.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "cd743988875c22c8c42a6043ef434562a5e3b5696df516719634a15d766e96b2",
+   "bytes": 69698,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Public Picks.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "182a4958c0c32c83ac6c1a210af699110684af9d9a124c5f33f236fb4c13ee57",
+   "bytes": 3738,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Resumes.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "812b8d23ade21d9abe2dd9d00157ba0c38ab2575dec5c6d29760c57f74695144",
+   "bytes": 77983,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/RPPF Conference Ratings.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "203c00eacce0b34ef62da68f81e2bd010ea81cdb7d5f01f480133ae5779a678a",
+   "bytes": 12725,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/RPPF Preseason Ratings.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "20f8e162c0cfa9af66730b8528c6ea0acfb319f9a7b3830d74c67ade9637fa45",
+   "bytes": 37210,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/RPPF Ratings.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "98dff6b518620225d3ef3151194aebd012d9e9385bdeaf58fdc1d0b4369c117b",
+   "bytes": 115333,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Seed Results.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "b776954e0089e3a55047303d6e79c63686b38fb16ad4962c26c97ac6544884ad",
+   "bytes": 1022,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Shooting Splits.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "957f0c2ffcd13764d8d9a62411e316a16adefb97d0e252e22ffad392d48fc31e",
+   "bytes": 173815,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Team Results.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "ecfb4418771e447942133d2fda910578c9982deb5e7691968a36768404a741b5",
+   "bytes": 17568,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/TeamRankings Away.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "f41e503e5a88d0b2ef6a81c00876dabd7322c1f0cedd0c4cafb3124a7e582fde",
+   "bytes": 66447,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/TeamRankings Home.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "27e5caaa95f09504b0223a29c6c405a8375a7d589492fa1e9773bb535f242590",
+   "bytes": 66313,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/TeamRankings Neutral.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "30a017d2fc9a68bdf1937b450cb55c06a1a2649a9ac043852ef3eb46bdcc84cf",
+   "bytes": 66273,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/TeamRankings.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "b98272410a23d096c905a74befbee57236131b7fe1802b8729f33c4a755cbe44",
+   "bytes": 160494,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Teamsheet Ranks.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "f245a12434a424aa4ee8692463b4f0dc0bcd9640c61837be49cb5970f7150220",
+   "bytes": 41329,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Tournament Locations.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "d93c771e9210d8a6cfb4eb21f3ae6d8c6d85cc639b1b2b9327cf75cc12529336",
+   "bytes": 552638,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Tournament Matchups.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "3d436ae6053d621715b657004a2113da263e88874291a610231b264c47bbb718",
+   "bytes": 80469,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Tournament Simulation.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "8497b5a9424a28d514aa7fe4ecb2ef4691e789cab4358ab811ee4f9f7948e68c",
+   "bytes": 2172,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Upset Count.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "3b83bbedb0014150e9961d9eeed5d76e5190b4334db83bd3b32852caa1e501df",
+   "bytes": 381,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Upset Seed Info.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "9ffd474f3c4716ef9a0b45769896490759e87da354511530dc190e1c4739edd6",
+   "bytes": 3637,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Z Rating Cumulative.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "0bcf58b9d45366a37188e09bb9140bf4ddfb25dae4b0f834847d2c55f5a67803",
+   "bytes": 3076,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/csv/Z Rating Teams.csv": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "dd77ddc981567fc65a2653945dc38609fd32f3c747b69b7657856a99ca8ae0be",
+   "bytes": 61412,
+   "pinned": "2026-11-03"
+  },
+  "raw/kaggle/mm.zip": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "bb8a9f97c9d8a1aa187326e26faf093ca7cf8f3931a256298d8fb73e62c07474",
+   "bytes": 1926720,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2005.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2005.parquet",
+   "sha256": "5c904699212ff23ba39b5d07294a0b86018ba39c7853ae9c31ef1357ea0e358e",
+   "bytes": 2328319,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2006.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2006.parquet",
+   "sha256": "375b844f63f945e793a6feea87c1504bacfbd22eb22a6ab2c30325eee8233934",
+   "bytes": 2676731,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2007.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2007.parquet",
+   "sha256": "dd04ec2e8d085940e663b317d7a2610d9459c42875a6e8380356ee2df4d4286f",
+   "bytes": 2993693,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2008.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2008.parquet",
+   "sha256": "b78004180049fac77c520cf3cee3ad2deb17ac9b5a7ce9521d8e8b1b9e76cac2",
+   "bytes": 3115222,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2009.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2009.parquet",
+   "sha256": "c965ed65d7e6989cbdea991495b7f9be94d72ea03e3d3f030d8acfadb2cc5950",
+   "bytes": 3111227,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2010.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2010.parquet",
+   "sha256": "a872bd9db0b7b3334859b60d28a96d5c61951ef50e76e00d916e46b316a0d4f1",
+   "bytes": 3213019,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2011.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2011.parquet",
+   "sha256": "414982590e55f634891b3d5e48948d1da7ac7310c8412f5f4a48653f310aaf20",
+   "bytes": 3164518,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2012.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2012.parquet",
+   "sha256": "f0d99ab76f665bd92f40a179b6397e83fdeb0006ec31846cdae8d928bb8a6a9c",
+   "bytes": 3181463,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2013.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2013.parquet",
+   "sha256": "9dc28d8dd01018daa33ed003fef72b0b76443a78878ebc1d1817a17e63599a2a",
+   "bytes": 3263175,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2014.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2014.parquet",
+   "sha256": "d12fb7bab1c19f0253df234b8a274a88fab533955440d61bb18ba59be449a8f2",
+   "bytes": 2925681,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2015.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2015.parquet",
+   "sha256": "68796c5fd4dc25fba8e4199fd1270367d0fec9efba505802c0f1b21c51c7b5d2",
+   "bytes": 2939007,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2016.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2016.parquet",
+   "sha256": "becd1a518d280bf1003d18297d1891c20932a6661f0d1e579b4e2a457591a6e1",
+   "bytes": 3794396,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2017.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2017.parquet",
+   "sha256": "79a5aec15bb308d3f139ed496ef019b2997e8836545619eb818f1fc784010eeb",
+   "bytes": 3011635,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2018.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2018.parquet",
+   "sha256": "88b2fa7853f54acce6d2bd168b1cb51ff2444bc541dbba25ef457305902c1aa8",
+   "bytes": 3122128,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2019.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2019.parquet",
+   "sha256": "cf1e0294316430c654cdb3c09312e965dcf2b518ee88672a1401189d8884118e",
+   "bytes": 4073649,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2020.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2020.parquet",
+   "sha256": "ca3b70ea2108731f0cf29376c5ffdbff83e51cc94f842cd3192656e0a6291e91",
+   "bytes": 3187477,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2021.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2021.parquet",
+   "sha256": "5fab65cc7be24e8c6b07672c8f661bbf14fe5a93f256d2ca4a1a9a7b63bb006f",
+   "bytes": 2332195,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2022.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2022.parquet",
+   "sha256": "86e3b24159222f27e150085aa91935de549ff4f45b3f5823d130595cf83a3ff4",
+   "bytes": 3259472,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2023.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2023.parquet",
+   "sha256": "5ab4586a8bcb7822a5cff94de3b97355d1d77a727d0320b44904a846b2474e05",
+   "bytes": 4300755,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2024.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2024.parquet",
+   "sha256": "5a0953a8199af746873f9a5cb48d31d327f489e220e65f9c6878830bf550de2a",
+   "bytes": 4293818,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2025.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2025.parquet",
+   "sha256": "68c59c2367ea17d08112d294b9974cec060e24d086bc25d3136edf8aaaf8fad3",
+   "bytes": 3497463,
+   "pinned": "2026-11-03"
+  },
+  "raw/players/player_box_2026.parquet": {
+   "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_mens_college_basketball_player_boxscores/player_box_2026.parquet",
+   "sha256": "62505219f40b4a83d9a89883620b927a336e6c78c4cea1d711db086641e2b810",
+   "bytes": 3397951,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2008.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "ca17f608a657d418720f1863c3489bd64033005c4e085fdaadca06df227b0b63",
+   "bytes": 5458382,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2009.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "c4eeab1bb52dd0571509e649af30bbfd14de91109f7c8fd0ccc0ee631bb2088a",
+   "bytes": 5606038,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2010.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "9b33e37b3b6c132a414842d1364d7cfc4c7cbb28a7cf7be74fc7136063568576",
+   "bytes": 5670718,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2011.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "63faf4df855514f4e34120eee9350e45d7e8c2783642c14904cca37652f1e7d9",
+   "bytes": 5656634,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2012.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "d0d26e8c5ca13a0a256d8496fd57843b8caddb0032fbd899b65edec41336f213",
+   "bytes": 5678049,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2013.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "4d979ceab9c0839604fb15d32972616a873de756b3b935c74b9cd31b18d500cf",
+   "bytes": 5749517,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2014.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "661401ba7e98549c0169f947a64b7813cd707c6ec945cabfe35e3e255b89de18",
+   "bytes": 5787493,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2015.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "65ee56e9d307bf98feb87699b3000f55817ecc4c51db7d5a1fb7675d15c7e522",
+   "bytes": 6461635,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2016.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "38147107292a91732c9cfb26f7ced7d5aec6e1ae90e2adbf8d8fb3851124c2b1",
+   "bytes": 6612611,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2017.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "e07ea7c3da9d92090912b1ead2208c9e049cfd40c6d4d465886807eb41c731c1",
+   "bytes": 7061823,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2018.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "fc00c76e6b03dff0a2b71a4f18a652b75df82829eea5287ac36c1ccfa96d4ad3",
+   "bytes": 6919168,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2019.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "ad91cce6829115c98657935b7ff867011afd5500c6fc7bbee50eb008eede5da4",
+   "bytes": 6949543,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2021.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "eacd60854010271530aea00478ce14e37c3cf7eff9c8b208e610b6d5c592a85b",
+   "bytes": 4967201,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2022.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "59c0de925a4ace10761cac2aed8fdb736938bf93766cfcfb00285f559db42912",
+   "bytes": 6954041,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2023.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "86787e391f84115f20e92a0f83f3d923cfa8ad0173f96764546abb4f004fcaa9",
+   "bytes": 7208524,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2024.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "f72347ee775a7bdde5228ed645438d43230c7438869900f96c23151147d3d670",
+   "bytes": 7278121,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2025.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "8c7e05b4f52c7916ef56540bde99e7fd78235b544fe59c3559e5d4faa66afb7c",
+   "bytes": 7563760,
+   "pinned": "2026-11-03"
+  },
+  "raw/sked2026.json": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "def77cde1f651f53552565d26abfb3902d973d359d92d9ff5cc9de7229902eec",
+   "bytes": 7742853,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2008.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "acc0553dfa97c2f5a884e5964009a662cc8831d51348cf88624d922978bc959b",
+   "bytes": 113587,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2009.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "5879772a95be5bcd2462419409c9b663fd994010c4620f24c30c6a984bd45b80",
+   "bytes": 88596,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2010.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "eb81cb7a810a35e322b6a2c4dcaec1b4dd34ce60f49e9f6638e6a7b3c54ed6f9",
+   "bytes": 113760,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2011.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "6a6f37bb74d8169c7755b872aa11d293c1119025b73f1fb867d68077fa19f7ca",
+   "bytes": 83577,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2012.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "6157a6350f1395c6530cda3a8ea63169f986b79912c65d8f8b1d8a24d913f2ff",
+   "bytes": 82813,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2013.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "a518da0583231be64a913ec018e9d20f949acdb35a26b0a4a5eaa5d8106def6b",
+   "bytes": 83209,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2014.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "44c4026657e07b366ea00610fb398bc190ab4579ffdcf09334ec9599908351d8",
+   "bytes": 89999,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2015.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "07cafe27d0ff478dd70a5656730ddc30f7184e88d6dc5e298ba50168d50333d3",
+   "bytes": 89909,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2016.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "c44f82cfea2cfb8868fa96a3c905773c11e1965eee321ea7a987d629296a9350",
+   "bytes": 93088,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2017.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "68bfb2ea969b6d0e48caf674904d5392ec3413d4bebbf277a03b549b60475699",
+   "bytes": 104009,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2018.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "f5f16c180581d25d4e1e48e3fae025953022f6fc7b429727f31160d05c0108ac",
+   "bytes": 82093,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2019.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "66b5f72aa6eeae105a36ddfb27f5a882abface926e0c61c43d54ea4a7b88375d",
+   "bytes": 79956,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2021.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "9284ebda8a0d5ea4638e1fe7c5d1ebe342b9ba7a5784f3e5305fdfb97a963e07",
+   "bytes": 92950,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2022.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "18dbcf9e5308df11a4c7c94d5b5f47ca7ae312fa92512bf15dc3bbab547cc3a4",
+   "bytes": 82577,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2023.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "2c1b2d324a963c640e8dc9805445935b2b2215c3e9f0da5b931d0a94731c9209",
+   "bytes": 102695,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2024.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "091f8a2730876bca8514367809973643ac4e89d7c69364213356b7ff765a9c34",
+   "bytes": 93909,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2025.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "d1cf81113654bdf92ae363de4c0047016315aec7f0a3e0dc3575cdb1ff8b18c7",
+   "bytes": 95822,
+   "pinned": "2026-11-03"
+  },
+  "raw/wiki/2026.txt": {
+   "url": "local (pinned by pipeline --pin)",
+   "sha256": "87c8c208c20811b49185148db58e1cee5c179b290d4a27d23cddc26586882082",
+   "bytes": 95800,
+   "pinned": "2026-11-03"
+  }
+ }
+}

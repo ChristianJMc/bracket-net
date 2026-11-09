@@ -1,0 +1,25 @@
+{
+  "name": "bracket-net",
+  "private": true,
+  "description": "NCAA men's tournament forecasts from a neural network",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "data": "node build/build-data.js",
+    "kaggle": "node build/profile-kaggle.js && node build/ingest/kaggle.js",
+    "news:espn": "node build/news/espn.js",
+    "news:wiki": "node build/news/wiki.js",
+    "news:extract": "node build/news/extract.mjs",
+    "review": "node build/review.js",
+    "walkforward": "node build/walkforward.js",
+    "walkforward:run": "node build/walkforward.js --run",
+    "checks": "node build/checks.js",
+    "brackets": "node build/brackets.js",
+    "train:base": "node build/train.js",
+    "site": "node build/assemble.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.4.0",
+    "hyparquet": "1.31.2",
+    "zod": "4.6.7"
+  }
+}

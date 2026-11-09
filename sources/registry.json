@@ -1,0 +1,221 @@
+{
+  "_policy": "Inputs describe the teams (performance, roster, availability, travel), never what the public or betting markets expect. Market lines and public pick shares are excluded as features.",
+  "_about": "Every data source the pipeline knows about. 'access' says how data gets in; 'timing' says whether its numbers are frozen before the tournament (safe as features) or include tournament results (leak). build/ingest reads this file; test/registry.test.js checks it.",
+  "sources": [
+    {
+      "id": "barttorvik_boxscores",
+      "name": "Barttorvik season game files",
+      "url": "https://barttorvik.com/",
+      "access": "automated",
+      "how": "build/build-data.js downloads raw/skedYYYY.json; ratings are recomputed here from box scores",
+      "coverage": "2008-2026, every D-I game",
+      "timing": "pre_tournament",
+      "notes": "Date-filtered rating pages sit behind a browser check; we do not bypass it. Box scores let us compute any cutoff ourselves."
+    },
+    {
+      "id": "wikipedia_brackets",
+      "name": "Wikipedia tournament pages",
+      "url": "https://en.wikipedia.org/",
+      "access": "automated",
+      "how": "raw/wiki/YYYY.txt via action=raw",
+      "coverage": "2008-2026",
+      "timing": "outcome",
+      "notes": "Seeds and regions are pre-tournament facts; scores are labels only."
+    },
+    {
+      "id": "kaggle_march_madness",
+      "name": "Kaggle: March Madness Data (Nishaan Amin)",
+      "url": "https://www.kaggle.com/datasets/nishaanamin/march-madness-data",
+      "access": "automated",
+      "how": "build/ingest/kaggle.js reads raw/kaggle/csv/*.csv (archive from the Kaggle API)",
+      "coverage": "2008-2026, varies by file",
+      "license": "CC0 Public Domain",
+      "timing": "mixed",
+      "notes": "Aggregates KenPom, Barttorvik, Heat Check, 538, ESPN, AP poll, Yahoo, EvanMiya, TeamRankings, adambrackets, basketunderreview. Per-file timing is in build/ingest/kaggle-files.js."
+    },
+    {
+      "id": "kenpom",
+      "name": "KenPom",
+      "url": "https://kenpom.com/",
+      "access": "via_kaggle",
+      "how": "Kaggle 'KenPom Barttorvik.csv' (KADJ EM/O/D/T) and 'KenPom Preseason.csv'",
+      "coverage": "2008-2026; preseason 2012-2026",
+      "timing": "pre_tournament",
+      "notes": "Subscription site; not scraped. Win totals in the Kaggle file match pre-tournament records exactly (docs/kaggle-profile.md)."
+    },
+    {
+      "id": "heatcheck",
+      "name": "Heat Check CBB",
+      "url": "https://heatcheckcbb.com/",
+      "access": "via_kaggle",
+      "how": "Kaggle 'Heat Check Ratings.csv', 'Heat Check Tournament Index.csv'",
+      "coverage": "2013-2026",
+      "timing": "mixed",
+      "notes": "Ratings include INJURY RANK and ROSTER RANK, the only injury-aware columns available. Tournament Index WINS is unverified and quarantined until test/leakage.test.js clears it."
+    },
+    {
+      "id": "fivethirtyeight",
+      "name": "538 power ratings",
+      "url": "https://abcnews.go.com/538",
+      "access": "via_kaggle",
+      "how": "Kaggle '538 Ratings.csv'; original forecasts also on github.com/fivethirtyeight/data",
+      "coverage": "2016-2024",
+      "timing": "pre_tournament",
+      "notes": "Discontinued after 2024."
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "url": "https://www.espn.com/",
+      "access": "automated",
+      "how": "build/news/espn.js: public site.api.espn.com scoreboard + game summary (recap article, box score)",
+      "coverage": "2008-2026 scoreboards; recaps vary by year",
+      "timing": "mixed",
+      "notes": "Recaps are written after the game: analysis only, never features. Betting odds are deliberately not collected: market and public opinion are not used as inputs. Public Picks (who-picked-whom, 2026 only, via Kaggle) label unpopular results; they are never features."
+    },
+    {
+      "id": "ap_poll",
+      "name": "AP poll (College Poll Archive)",
+      "url": "https://www.collegepollarchive.com/",
+      "access": "via_kaggle",
+      "how": "Kaggle 'AP Poll Data.csv' (every week since 2008)",
+      "coverage": "2008-2026",
+      "timing": "weekly",
+      "notes": "Only weeks before Selection Sunday may be used. Preseason rank is a known tournament predictor."
+    },
+    {
+      "id": "evanmiya",
+      "name": "EvanMiya",
+      "url": "https://evanmiya.com/",
+      "access": "via_kaggle",
+      "how": "Kaggle 'EvanMiya.csv'",
+      "coverage": "2011-2026",
+      "timing": "pre_tournament",
+      "notes": "Includes KILLSHOTS (10-0 runs) and injury rank."
+    },
+    {
+      "id": "teamrankings",
+      "name": "TeamRankings",
+      "url": "https://www.teamrankings.com/",
+      "access": "via_kaggle",
+      "how": "Kaggle 'TeamRankings*.csv' (overall, home, away, neutral splits)",
+      "coverage": "2008-2026",
+      "timing": "pre_tournament",
+      "notes": "Ratings plus luck and consistency ratings."
+    },
+    {
+      "id": "yahoo",
+      "name": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/",
+      "access": "via_kaggle",
+      "how": "Folded into Kaggle files (bracket pick data)",
+      "coverage": "varies",
+      "timing": "pre_tournament",
+      "notes": "No direct ingestion."
+    },
+    {
+      "id": "adambrackets",
+      "name": "Adam Brackets",
+      "url": "https://adambrackets.com/",
+      "access": "via_kaggle",
+      "how": "Kaggle 'Z Rating Teams.csv' and resume data",
+      "coverage": "2015-2026",
+      "timing": "pre_tournament",
+      "notes": "'Z Rating Cumulative.csv' is an all-time aggregate: quarantined."
+    },
+    {
+      "id": "basketunderreview",
+      "name": "Basket Under Review",
+      "url": "https://www.basketunderreview.com/",
+      "access": "via_kaggle",
+      "how": "Kaggle 'RPPF *.csv'",
+      "coverage": "2012-2026",
+      "timing": "pre_tournament",
+      "notes": "RPPF ratings, preseason ratings, conference ratings."
+    },
+    {
+      "id": "news",
+      "name": "News coverage around games",
+      "url": "https://www.espn.com/",
+      "access": "automated",
+      "how": "build/news/espn.js stores recaps and game news; build/news/extract.js turns text into structured factors with Claude",
+      "coverage": "Historical recaps via ESPN; live pregame news for the current season",
+      "timing": "split_by_publish_time",
+      "notes": "Each item is tagged pregame or postgame by publish time vs tip-off. Only pregame items may become features; postgame items feed the miss review."
+    },
+    {
+      "id": "espn_player_box",
+      "name": "ESPN player box scores (sportsdataverse data releases)",
+      "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/tag/espn_mens_college_basketball_player_boxscores",
+      "access": "automated",
+      "how": "build/ingest/players.mjs downloads raw/players/player_box_YYYY.parquet (hash-pinned) and reads it with hyparquet",
+      "coverage": "2005-2026 (2005-2007 only feed continuity and experience)",
+      "license": "sportsdataverse (MIT-licensed tooling; data from ESPN public endpoints)",
+      "timing": "pre_tournament",
+      "notes": "Only games before each team's first NCAA game are used. Gives roster shape, continuity, transfers, experience, and a box-score injury signal (did the top players play their usual minutes in the last 3 games)."
+    },
+    {
+      "id": "own_elo",
+      "name": "Margin-of-victory Elo (computed here)",
+      "url": "https://barttorvik.com/",
+      "access": "automated",
+      "how": "build/ingest/elo.js from raw/skedYYYY.json",
+      "coverage": "2008-2026",
+      "timing": "pre_tournament",
+      "notes": "K and season carry-over tuned on regular-season games only; snapshot before each team's first NCAA game."
+    },
+    {
+      "id": "own_schedule",
+      "name": "Schedule workload, rest and road share (computed here)",
+      "url": "https://barttorvik.com/",
+      "access": "automated",
+      "how": "build/ingest/schedule.js from raw/skedYYYY.json",
+      "coverage": "2008-2026",
+      "timing": "pre_tournament",
+      "notes": "Games in the last 7/14 days, days of rest before the first NCAA game, share of games on the road. Days of rest before each tournament game are computed per game."
+    },
+    {
+      "id": "sports_reference_coaches",
+      "name": "Sports-Reference season coach pages",
+      "url": "https://www.sports-reference.com/cbb/seasons/men/2024-coaches.html",
+      "access": "automated",
+      "how": "build/ingest/coaches.js; one page per season, 4 seconds apart, cached and hash-pinned",
+      "coverage": "2006-2026",
+      "timing": "mixed",
+      "notes": "Career columns include the season itself (tournament too), so for season Y they are read from the coach's row on an earlier season's page. Only identity and start year come from season Y."
+    },
+    {
+      "id": "open_meteo",
+      "name": "Open-Meteo elevation and historical weather",
+      "url": "https://open-meteo.com/",
+      "access": "automated",
+      "how": "build/ingest/gamesite.js: elevation for every campus and game site; hourly surface pressure at each site for tip-off",
+      "coverage": "2009-2026 tournament sites",
+      "license": "CC BY 4.0",
+      "timing": "pre_tournament",
+      "notes": "Weather is a fact about the venue, not the teams; it can only matter through altitude for indoor games."
+    },
+    {
+      "id": "espn_scoreboard_context",
+      "name": "ESPN scoreboards: tip-off time, venue, attendance, home/away",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard",
+      "access": "automated",
+      "how": "build/ingest/gamesite.js (cached under raw/espn/scoreboard)",
+      "coverage": "2009-2026 (none for 2008)",
+      "timing": "mixed",
+      "notes": "Tip time, venue and home designation are known beforehand. Attendance is counted at the game and is only a proxy for which crowd will show up."
+    },
+    {
+      "id": "kaggle_mmlm",
+      "name": "Kaggle March Machine Learning Mania (competition data)",
+      "url": "https://www.kaggle.com/competitions",
+      "access": "manual",
+      "how": "You download the competition files with your own free Kaggle account (accept the rules, Download All) into raw/mmlm/; build/ingest/mmlm.js reads MMasseyOrdinals.csv and MTeamSpellings.csv",
+      "coverage": "Results since 1985 (box scores since 2003); Massey ordinals since 2003",
+      "license": "Kaggle competition rules (personal, non-commercial research)",
+      "timing": "mixed",
+      "notes": "Only rankings published on or before day 133 (Selection Sunday) are used. Human polls (AP, USA) are kept as a separate opinion column. Not yet used: results before 2008, which would need our ratings rebuilt from these box scores."
+    }
+  ],
+  "_security": "Downloads go through build/lib/safe-fetch.js (HTTPS, host allowlist, size caps) and every raw file is SHA-256 pinned in sources/lock.json. Downloaded files are data only: nothing executes them. News text is sanitized and screened for prompt injection (build/news/sanitize.js) before a model reads it, and extracted claims must quote the source."
+}

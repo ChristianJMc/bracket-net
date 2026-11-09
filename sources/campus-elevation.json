@@ -1,0 +1,1522 @@
+{
+ "about": "Campus elevation (m) by normalized school name; Kaggle coordinates, Open-Meteo elevation.",
+ "schools": {
+  "auburn": {
+   "team": "Auburn",
+   "lat": 32.6099,
+   "lon": -85.4808,
+   "elev": 215
+  },
+  "alabama st": {
+   "team": "Alabama St.",
+   "lat": 32.3617,
+   "lon": -86.2792,
+   "elev": 89
+  },
+  "louisville": {
+   "team": "Louisville",
+   "lat": 38.2527,
+   "lon": -85.7585,
+   "elev": 139
+  },
+  "creighton": {
+   "team": "Creighton",
+   "lat": 41.2565,
+   "lon": -95.9345,
+   "elev": 323
+  },
+  "michigan": {
+   "team": "Michigan",
+   "lat": 42.2808,
+   "lon": -83.743,
+   "elev": 266
+  },
+  "uc san diego": {
+   "team": "UC San Diego",
+   "lat": 32.8427,
+   "lon": -117.2578,
+   "elev": 179
+  },
+  "texas am": {
+   "team": "Texas A&M",
+   "lat": 30.628,
+   "lon": -96.3344,
+   "elev": 105
+  },
+  "yale": {
+   "team": "Yale",
+   "lat": 41.3083,
+   "lon": -72.9279,
+   "elev": 21
+  },
+  "mississippi": {
+   "team": "Mississippi",
+   "lat": 34.366,
+   "lon": -89.5188,
+   "elev": 159
+  },
+  "north carolina": {
+   "team": "North Carolina",
+   "lat": 35.9132,
+   "lon": -79.0558,
+   "elev": 151
+  },
+  "iowa st": {
+   "team": "Iowa St.",
+   "lat": 42.0308,
+   "lon": -93.6319,
+   "elev": 277
+  },
+  "lipscomb": {
+   "team": "Lipscomb",
+   "lat": 36.1627,
+   "lon": -86.7816,
+   "elev": 159
+  },
+  "marquette": {
+   "team": "Marquette",
+   "lat": 43.0389,
+   "lon": -87.9065,
+   "elev": 189
+  },
+  "new mexico": {
+   "team": "New Mexico",
+   "lat": 35.0844,
+   "lon": -106.6504,
+   "elev": 1515
+  },
+  "michigan st": {
+   "team": "Michigan St.",
+   "lat": 42.737,
+   "lon": -84.4839,
+   "elev": 264
+  },
+  "bryant": {
+   "team": "Bryant",
+   "lat": 41.9668,
+   "lon": -71.5495,
+   "elev": 120
+  },
+  "florida": {
+   "team": "Florida",
+   "lat": 29.6516,
+   "lon": -82.3248,
+   "elev": 59
+  },
+  "norfolk st": {
+   "team": "Norfolk St.",
+   "lat": 36.8508,
+   "lon": -76.2859,
+   "elev": 7
+  },
+  "connecticut": {
+   "team": "Connecticut",
+   "lat": 41.8084,
+   "lon": -72.2495,
+   "elev": 193
+  },
+  "oklahoma": {
+   "team": "Oklahoma",
+   "lat": 35.2226,
+   "lon": -97.4395,
+   "elev": 358
+  },
+  "memphis": {
+   "team": "Memphis",
+   "lat": 35.1495,
+   "lon": -90.049,
+   "elev": 84
+  },
+  "colorado st": {
+   "team": "Colorado St.",
+   "lat": 40.5853,
+   "lon": -105.0844,
+   "elev": 1528
+  },
+  "maryland": {
+   "team": "Maryland",
+   "lat": 38.9897,
+   "lon": -76.9378,
+   "elev": 28
+  },
+  "grand canyon": {
+   "team": "Grand Canyon",
+   "lat": 33.4484,
+   "lon": -112.074,
+   "elev": 333
+  },
+  "missouri": {
+   "team": "Missouri",
+   "lat": 38.9517,
+   "lon": -92.3341,
+   "elev": 216
+  },
+  "drake": {
+   "team": "Drake",
+   "lat": 41.5868,
+   "lon": -93.625,
+   "elev": 250
+  },
+  "texas tech": {
+   "team": "Texas Tech",
+   "lat": 33.5846,
+   "lon": -101.8456,
+   "elev": 976
+  },
+  "unc wilmington": {
+   "team": "UNC Wilmington",
+   "lat": 34.2104,
+   "lon": -77.8868,
+   "elev": 14
+  },
+  "kansas": {
+   "team": "Kansas",
+   "lat": 38.9717,
+   "lon": -95.2353,
+   "elev": 265
+  },
+  "arkansas": {
+   "team": "Arkansas",
+   "lat": 36.0627,
+   "lon": -94.1606,
+   "elev": 430
+  },
+  "st johns": {
+   "team": "St. John's",
+   "lat": 40.7282,
+   "lon": -73.7949,
+   "elev": 21
+  },
+  "nebraska omaha": {
+   "team": "Nebraska Omaha",
+   "lat": 41.2586,
+   "lon": -95.9378,
+   "elev": 325
+  },
+  "duke": {
+   "team": "Duke",
+   "lat": 35.994,
+   "lon": -78.8986,
+   "elev": 124
+  },
+  "mount st marys": {
+   "team": "Mount St. Mary's",
+   "lat": 39.7045,
+   "lon": -77.3269,
+   "elev": 136
+  },
+  "mississippi st": {
+   "team": "Mississippi St.",
+   "lat": 33.4504,
+   "lon": -88.8184,
+   "elev": 101
+  },
+  "baylor": {
+   "team": "Baylor",
+   "lat": 31.5493,
+   "lon": -97.1467,
+   "elev": 148
+  },
+  "oregon": {
+   "team": "Oregon",
+   "lat": 44.0521,
+   "lon": -123.0868,
+   "elev": 130
+  },
+  "liberty": {
+   "team": "Liberty",
+   "lat": 37.4138,
+   "lon": -79.1422,
+   "elev": 201
+  },
+  "arizona": {
+   "team": "Arizona",
+   "lat": 32.254,
+   "lon": -110.9742,
+   "elev": 723
+  },
+  "akron": {
+   "team": "Akron",
+   "lat": 41.0814,
+   "lon": -81.519,
+   "elev": 290
+  },
+  "byu": {
+   "team": "BYU",
+   "lat": 40.2338,
+   "lon": -111.6585,
+   "elev": 1392
+  },
+  "vcu": {
+   "team": "VCU",
+   "lat": 37.5407,
+   "lon": -77.436,
+   "elev": 55
+  },
+  "wisconsin": {
+   "team": "Wisconsin",
+   "lat": 43.0722,
+   "lon": -89.4008,
+   "elev": 271
+  },
+  "montana": {
+   "team": "Montana",
+   "lat": 46.8721,
+   "lon": -113.994,
+   "elev": 978
+  },
+  "st marys": {
+   "team": "Saint Mary's",
+   "lat": 37.8349,
+   "lon": -122.1297,
+   "elev": 149
+  },
+  "vanderbilt": {
+   "team": "Vanderbilt",
+   "lat": 36.1627,
+   "lon": -86.7816,
+   "elev": 159
+  },
+  "alabama": {
+   "team": "Alabama",
+   "lat": 33.2098,
+   "lon": -87.5692,
+   "elev": 65
+  },
+  "robert morris": {
+   "team": "Robert Morris",
+   "lat": 40.517,
+   "lon": -80.2213,
+   "elev": 349
+  },
+  "houston": {
+   "team": "Houston",
+   "lat": 29.7604,
+   "lon": -95.3698,
+   "elev": 20
+  },
+  "siu edwardsville": {
+   "team": "SIU Edwardsville",
+   "lat": 38.8114,
+   "lon": -89.9532,
+   "elev": 168
+  },
+  "gonzaga": {
+   "team": "Gonzaga",
+   "lat": 47.6588,
+   "lon": -117.426,
+   "elev": 570
+  },
+  "georgia": {
+   "team": "Georgia",
+   "lat": 33.9519,
+   "lon": -83.3576,
+   "elev": 203
+  },
+  "clemson": {
+   "team": "Clemson",
+   "lat": 34.6834,
+   "lon": -82.8374,
+   "elev": 223
+  },
+  "mcneese st": {
+   "team": "McNeese St.",
+   "lat": 30.2129,
+   "lon": -93.2189,
+   "elev": 7
+  },
+  "purdue": {
+   "team": "Purdue",
+   "lat": 40.4259,
+   "lon": -86.9081,
+   "elev": 189
+  },
+  "high point": {
+   "team": "High Point",
+   "lat": 35.9706,
+   "lon": -79.9975,
+   "elev": 272
+  },
+  "illinois": {
+   "team": "Illinois",
+   "lat": 40.1164,
+   "lon": -88.2434,
+   "elev": 227
+  },
+  "xavier": {
+   "team": "Xavier",
+   "lat": 39.1031,
+   "lon": -84.512,
+   "elev": 173
+  },
+  "kentucky": {
+   "team": "Kentucky",
+   "lat": 38.0406,
+   "lon": -84.5037,
+   "elev": 296
+  },
+  "troy": {
+   "team": "Troy",
+   "lat": 31.8088,
+   "lon": -85.97,
+   "elev": 166
+  },
+  "ucla": {
+   "team": "UCLA",
+   "lat": 34.0522,
+   "lon": -118.2437,
+   "elev": 91
+  },
+  "utah st": {
+   "team": "Utah St.",
+   "lat": 41.737,
+   "lon": -111.8338,
+   "elev": 1381
+  },
+  "tennessee": {
+   "team": "Tennessee",
+   "lat": 35.9606,
+   "lon": -83.9207,
+   "elev": 276
+  },
+  "wofford": {
+   "team": "Wofford",
+   "lat": 34.9496,
+   "lon": -81.932,
+   "elev": 248
+  },
+  "stetson": {
+   "team": "Stetson",
+   "lat": 29.0283,
+   "lon": -81.3031,
+   "elev": 15
+  },
+  "florida atlantic": {
+   "team": "Florida Atlantic",
+   "lat": 26.376,
+   "lon": -80.1224,
+   "elev": 8
+  },
+  "northwestern": {
+   "team": "Northwestern",
+   "lat": 42.0451,
+   "lon": -87.6877,
+   "elev": 188
+  },
+  "san diego st": {
+   "team": "San Diego St.",
+   "lat": 32.7157,
+   "lon": -117.1611,
+   "elev": 20
+  },
+  "uab": {
+   "team": "UAB",
+   "lat": 33.5186,
+   "lon": -86.8104,
+   "elev": 187
+  },
+  "duquesne": {
+   "team": "Duquesne",
+   "lat": 40.4406,
+   "lon": -79.9959,
+   "elev": 236
+  },
+  "morehead st": {
+   "team": "Morehead St.",
+   "lat": 38.184,
+   "lon": -83.4327,
+   "elev": 225
+  },
+  "washington st": {
+   "team": "Washington St.",
+   "lat": 46.7298,
+   "lon": -117.1817,
+   "elev": 725
+  },
+  "south dakota st": {
+   "team": "South Dakota St.",
+   "lat": 44.3114,
+   "lon": -96.7984,
+   "elev": 494
+  },
+  "wagner": {
+   "team": "Wagner",
+   "lat": 40.579,
+   "lon": -74.1515,
+   "elev": 33
+  },
+  "college of charleston": {
+   "team": "College of Charleston",
+   "lat": 32.7765,
+   "lon": -79.9311,
+   "elev": 12
+  },
+  "colgate": {
+   "team": "Colgate",
+   "lat": 42.827,
+   "lon": -75.5446,
+   "elev": 345
+  },
+  "dayton": {
+   "team": "Dayton",
+   "lat": 39.7589,
+   "lon": -84.1916,
+   "elev": 228
+  },
+  "nevada": {
+   "team": "Nevada",
+   "lat": 39.5299,
+   "lon": -119.8143,
+   "elev": 1385
+  },
+  "long beach st": {
+   "team": "Long Beach St.",
+   "lat": 33.7701,
+   "lon": -118.1937,
+   "elev": 16
+  },
+  "longwood": {
+   "team": "Longwood",
+   "lat": 37.3021,
+   "lon": -78.3919,
+   "elev": 100
+  },
+  "nebraska": {
+   "team": "Nebraska",
+   "lat": 40.8136,
+   "lon": -96.7026,
+   "elev": 368
+  },
+  "james madison": {
+   "team": "James Madison",
+   "lat": 38.4496,
+   "lon": -78.8689,
+   "elev": 408
+  },
+  "vermont": {
+   "team": "Vermont",
+   "lat": 44.4759,
+   "lon": -73.2121,
+   "elev": 66
+  },
+  "north carolina st": {
+   "team": "North Carolina St.",
+   "lat": 35.7796,
+   "lon": -78.6382,
+   "elev": 114
+  },
+  "oakland": {
+   "team": "Oakland",
+   "lat": 42.6875,
+   "lon": -83.2341,
+   "elev": 293
+  },
+  "colorado": {
+   "team": "Colorado",
+   "lat": 40.015,
+   "lon": -105.2705,
+   "elev": 1625
+  },
+  "western kentucky": {
+   "team": "Western Kentucky",
+   "lat": 36.9685,
+   "lon": -86.4808,
+   "elev": 160
+  },
+  "grambling st": {
+   "team": "Grambling St.",
+   "lat": 32.521,
+   "lon": -92.7199,
+   "elev": 97
+  },
+  "tcu": {
+   "team": "TCU",
+   "lat": 32.7555,
+   "lon": -97.3308,
+   "elev": 193
+  },
+  "samford": {
+   "team": "Samford",
+   "lat": 33.4718,
+   "lon": -86.7999,
+   "elev": 206
+  },
+  "south carolina": {
+   "team": "South Carolina",
+   "lat": 34.0007,
+   "lon": -81.0348,
+   "elev": 90
+  },
+  "texas": {
+   "team": "Texas",
+   "lat": 30.2672,
+   "lon": -97.7431,
+   "elev": 157
+  },
+  "st peters": {
+   "team": "Saint Peter's",
+   "lat": 40.7178,
+   "lon": -74.0431,
+   "elev": 6
+  },
+  "texas am corpus chris": {
+   "team": "Texas A&M Corpus Chris",
+   "lat": 27.8006,
+   "lon": -97.3964,
+   "elev": 8
+  },
+  "west virginia": {
+   "team": "West Virginia",
+   "lat": 39.6295,
+   "lon": -79.9559,
+   "elev": 271
+  },
+  "virginia": {
+   "team": "Virginia",
+   "lat": 38.0293,
+   "lon": -78.4767,
+   "elev": 151
+  },
+  "furman": {
+   "team": "Furman",
+   "lat": 34.8526,
+   "lon": -82.394,
+   "elev": 294
+  },
+  "uc santa barbara": {
+   "team": "UC Santa Barbara",
+   "lat": 34.4208,
+   "lon": -119.6982,
+   "elev": 14
+  },
+  "princeton": {
+   "team": "Princeton",
+   "lat": 40.3573,
+   "lon": -74.6672,
+   "elev": 41
+  },
+  "fairleigh dickinson": {
+   "team": "Fairleigh Dickinson",
+   "lat": 40.8932,
+   "lon": -74.0117,
+   "elev": 43
+  },
+  "oral roberts": {
+   "team": "Oral Roberts",
+   "lat": 36.154,
+   "lon": -95.9928,
+   "elev": 226
+  },
+  "louisiana lafayette": {
+   "team": "Louisiana Lafayette",
+   "lat": 30.2241,
+   "lon": -92.0198,
+   "elev": 14
+  },
+  "providence": {
+   "team": "Providence",
+   "lat": 41.824,
+   "lon": -71.4128,
+   "elev": 10
+  },
+  "kansas st": {
+   "team": "Kansas St.",
+   "lat": 39.1836,
+   "lon": -96.5717,
+   "elev": 315
+  },
+  "montana st": {
+   "team": "Montana St.",
+   "lat": 45.6815,
+   "lon": -111.032,
+   "elev": 1464
+  },
+  "usc": {
+   "team": "USC",
+   "lat": 34.0522,
+   "lon": -118.2437,
+   "elev": 91
+  },
+  "northern kentucky": {
+   "team": "Northern Kentucky",
+   "lat": 39.0331,
+   "lon": -84.4519,
+   "elev": 259
+  },
+  "iowa": {
+   "team": "Iowa",
+   "lat": 41.6578,
+   "lon": -91.5346,
+   "elev": 218
+  },
+  "miami fl": {
+   "team": "Miami FL",
+   "lat": 25.7617,
+   "lon": -80.1918,
+   "elev": 5
+  },
+  "indiana": {
+   "team": "Indiana",
+   "lat": 39.1653,
+   "lon": -86.5264,
+   "elev": 239
+  },
+  "kent st": {
+   "team": "Kent St.",
+   "lat": 41.1537,
+   "lon": -81.3579,
+   "elev": 324
+  },
+  "pittsburgh": {
+   "team": "Pittsburgh",
+   "lat": 40.4406,
+   "lon": -79.9959,
+   "elev": 236
+  },
+  "kennesaw st": {
+   "team": "Kennesaw St.",
+   "lat": 34.0218,
+   "lon": -84.6095,
+   "elev": 335
+  },
+  "penn st": {
+   "team": "Penn St.",
+   "lat": 40.8148,
+   "lon": -77.8653,
+   "elev": 349
+  },
+  "howard": {
+   "team": "Howard",
+   "lat": 38.9072,
+   "lon": -77.0369,
+   "elev": 25
+  },
+  "iona": {
+   "team": "Iona",
+   "lat": 40.9115,
+   "lon": -73.7824,
+   "elev": 32
+  },
+  "arizona st": {
+   "team": "Arizona St.",
+   "lat": 33.4255,
+   "lon": -111.94,
+   "elev": 360
+  },
+  "boise st": {
+   "team": "Boise St.",
+   "lat": 43.615,
+   "lon": -116.2023,
+   "elev": 832
+  },
+  "unc asheville": {
+   "team": "UNC Asheville",
+   "lat": 35.5951,
+   "lon": -82.5515,
+   "elev": 674
+  },
+  "georgia st": {
+   "team": "Georgia St.",
+   "lat": 33.7488,
+   "lon": -84.3877,
+   "elev": 327
+  },
+  "new mexico st": {
+   "team": "New Mexico St.",
+   "lat": 32.3199,
+   "lon": -106.7637,
+   "elev": 1217
+  },
+  "notre dame": {
+   "team": "Notre Dame",
+   "lat": 41.7002,
+   "lon": -86.2379,
+   "elev": 228
+  },
+  "davidson": {
+   "team": "Davidson",
+   "lat": 35.4993,
+   "lon": -80.8487,
+   "elev": 252
+  },
+  "cal st fullerton": {
+   "team": "Cal St. Fullerton",
+   "lat": 33.8704,
+   "lon": -117.9242,
+   "elev": 53
+  },
+  "virginia tech": {
+   "team": "Virginia Tech",
+   "lat": 37.2296,
+   "lon": -80.4139,
+   "elev": 633
+  },
+  "murray st": {
+   "team": "Murray St.",
+   "lat": 36.6103,
+   "lon": -88.3148,
+   "elev": 166
+  },
+  "san francisco": {
+   "team": "San Francisco",
+   "lat": 37.7749,
+   "lon": -122.4194,
+   "elev": 18
+  },
+  "wright st": {
+   "team": "Wright St.",
+   "lat": 39.7589,
+   "lon": -84.1916,
+   "elev": 228
+  },
+  "seton hall": {
+   "team": "Seton Hall",
+   "lat": 40.7489,
+   "lon": -74.261,
+   "elev": 52
+  },
+  "chattanooga": {
+   "team": "Chattanooga",
+   "lat": 35.0458,
+   "lon": -85.3094,
+   "elev": 209
+  },
+  "ohio st": {
+   "team": "Ohio St.",
+   "lat": 39.9612,
+   "lon": -82.9988,
+   "elev": 227
+  },
+  "loyola chicago": {
+   "team": "Loyola Chicago",
+   "lat": 41.8781,
+   "lon": -87.6298,
+   "elev": 241
+  },
+  "villanova": {
+   "team": "Villanova",
+   "lat": 40.0376,
+   "lon": -75.3492,
+   "elev": 133
+  },
+  "delaware": {
+   "team": "Delaware",
+   "lat": 39.6837,
+   "lon": -75.7497,
+   "elev": 39
+  },
+  "texas southern": {
+   "team": "Texas Southern",
+   "lat": 29.7604,
+   "lon": -95.3698,
+   "elev": 20
+  },
+  "richmond": {
+   "team": "Richmond",
+   "lat": 37.5407,
+   "lon": -77.436,
+   "elev": 55
+  },
+  "lsu": {
+   "team": "LSU",
+   "lat": 30.4515,
+   "lon": -91.1871,
+   "elev": 18
+  },
+  "jacksonville st": {
+   "team": "Jacksonville St.",
+   "lat": 30.3322,
+   "lon": -81.6557,
+   "elev": 6
+  },
+  "ohio": {
+   "team": "Ohio",
+   "lat": 39.3292,
+   "lon": -82.1013,
+   "elev": 221
+  },
+  "eastern washington": {
+   "team": "Eastern Washington",
+   "lat": 47.4874,
+   "lon": -117.5758,
+   "elev": 720
+  },
+  "st bonaventure": {
+   "team": "St. Bonaventure",
+   "lat": 42.0803,
+   "lon": -78.475,
+   "elev": 436
+  },
+  "georgetown": {
+   "team": "Georgetown",
+   "lat": 38.9079,
+   "lon": -77.0728,
+   "elev": 41
+  },
+  "florida st": {
+   "team": "Florida St.",
+   "lat": 30.4383,
+   "lon": -84.2807,
+   "elev": 69
+  },
+  "unc greensboro": {
+   "team": "UNC Greensboro",
+   "lat": 36.0726,
+   "lon": -79.792,
+   "elev": 257
+  },
+  "abilene christian": {
+   "team": "Abilene Christian",
+   "lat": 32.4487,
+   "lon": -99.7331,
+   "elev": 525
+  },
+  "hartford": {
+   "team": "Hartford",
+   "lat": 41.7658,
+   "lon": -72.6734,
+   "elev": 32
+  },
+  "winthrop": {
+   "team": "Winthrop",
+   "lat": 34.9249,
+   "lon": -81.0251,
+   "elev": 210
+  },
+  "north texas": {
+   "team": "North Texas",
+   "lat": 33.2148,
+   "lon": -97.1331,
+   "elev": 203
+  },
+  "drexel": {
+   "team": "Drexel",
+   "lat": 39.9526,
+   "lon": -75.1652,
+   "elev": 32
+  },
+  "georgia tech": {
+   "team": "Georgia Tech",
+   "lat": 33.7488,
+   "lon": -84.3877,
+   "elev": 327
+  },
+  "oregon st": {
+   "team": "Oregon St.",
+   "lat": 44.5646,
+   "lon": -123.262,
+   "elev": 73
+  },
+  "oklahoma st": {
+   "team": "Oklahoma St.",
+   "lat": 36.1156,
+   "lon": -97.0584,
+   "elev": 278
+  },
+  "syracuse": {
+   "team": "Syracuse",
+   "lat": 43.0481,
+   "lon": -76.1474,
+   "elev": 126
+  },
+  "rutgers": {
+   "team": "Rutgers",
+   "lat": 40.5549,
+   "lon": -74.4643,
+   "elev": 22
+  },
+  "cleveland st": {
+   "team": "Cleveland St.",
+   "lat": 41.4993,
+   "lon": -81.6944,
+   "elev": 202
+  },
+  "north dakota st": {
+   "team": "North Dakota St.",
+   "lat": 46.8772,
+   "lon": -96.7898,
+   "elev": 277
+  },
+  "ucf": {
+   "team": "UCF",
+   "lat": 28.5384,
+   "lon": -81.3789,
+   "elev": 37
+  },
+  "st louis": {
+   "team": "Saint Louis",
+   "lat": 38.627,
+   "lon": -90.1994,
+   "elev": 145
+  },
+  "belmont": {
+   "team": "Belmont",
+   "lat": 36.1627,
+   "lon": -86.7816,
+   "elev": 159
+  },
+  "minnesota": {
+   "team": "Minnesota",
+   "lat": 44.9778,
+   "lon": -93.265,
+   "elev": 253
+  },
+  "bradley": {
+   "team": "Bradley",
+   "lat": 40.6936,
+   "lon": -89.589,
+   "elev": 153
+  },
+  "buffalo": {
+   "team": "Buffalo",
+   "lat": 42.8864,
+   "lon": -78.8784,
+   "elev": 180
+  },
+  "gardner webb": {
+   "team": "Gardner Webb",
+   "lat": 35.2543,
+   "lon": -81.667,
+   "elev": 271
+  },
+  "uc irvine": {
+   "team": "UC Irvine",
+   "lat": 33.6846,
+   "lon": -117.8265,
+   "elev": 13
+  },
+  "old dominion": {
+   "team": "Old Dominion",
+   "lat": 36.8508,
+   "lon": -76.2859,
+   "elev": 7
+  },
+  "cincinnati": {
+   "team": "Cincinnati",
+   "lat": 39.1031,
+   "lon": -84.512,
+   "elev": 173
+  },
+  "washington": {
+   "team": "Washington",
+   "lat": 47.6062,
+   "lon": -122.3321,
+   "elev": 59
+  },
+  "northeastern": {
+   "team": "Northeastern",
+   "lat": 42.3601,
+   "lon": -71.0589,
+   "elev": 9
+  },
+  "umbc": {
+   "team": "UMBC",
+   "lat": 39.2904,
+   "lon": -76.6122,
+   "elev": 29
+  },
+  "radford": {
+   "team": "Radford",
+   "lat": 37.1318,
+   "lon": -80.5764,
+   "elev": 561
+  },
+  "wichita st": {
+   "team": "Wichita St.",
+   "lat": 37.6872,
+   "lon": -97.3301,
+   "elev": 397
+  },
+  "marshall": {
+   "team": "Marshall",
+   "lat": 38.4192,
+   "lon": -82.4452,
+   "elev": 177
+  },
+  "stephen f austin": {
+   "team": "Stephen F. Austin",
+   "lat": 31.6039,
+   "lon": -94.656,
+   "elev": 91
+  },
+  "butler": {
+   "team": "Butler",
+   "lat": 39.7684,
+   "lon": -86.1581,
+   "elev": 214
+  },
+  "penn": {
+   "team": "Penn",
+   "lat": 39.9526,
+   "lon": -75.1652,
+   "elev": 32
+  },
+  "bucknell": {
+   "team": "Bucknell",
+   "lat": 40.9645,
+   "lon": -76.8844,
+   "elev": 143
+  },
+  "rhode island": {
+   "team": "Rhode Island",
+   "lat": 41.4476,
+   "lon": -71.5247,
+   "elev": 57
+  },
+  "east tennessee st": {
+   "team": "East Tennessee St.",
+   "lat": 36.3134,
+   "lon": -82.3535,
+   "elev": 495
+  },
+  "smu": {
+   "team": "SMU",
+   "lat": 32.7767,
+   "lon": -96.797,
+   "elev": 137
+  },
+  "florida gulf coast": {
+   "team": "Florida Gulf Coast",
+   "lat": 26.6406,
+   "lon": -81.8723,
+   "elev": 5
+  },
+  "north dakota": {
+   "team": "North Dakota",
+   "lat": 47.9253,
+   "lon": -97.0329,
+   "elev": 257
+  },
+  "uc davis": {
+   "team": "UC Davis",
+   "lat": 38.5449,
+   "lon": -121.7405,
+   "elev": 17
+  },
+  "middle tennessee": {
+   "team": "Middle Tennessee",
+   "lat": 35.8456,
+   "lon": -86.3903,
+   "elev": 190
+  },
+  "austin peay": {
+   "team": "Austin Peay",
+   "lat": 36.5298,
+   "lon": -87.3595,
+   "elev": 142
+  },
+  "california": {
+   "team": "California",
+   "lat": 37.8715,
+   "lon": -122.273,
+   "elev": 56
+  },
+  "hawaii": {
+   "team": "Hawaii",
+   "lat": 21.3099,
+   "lon": -157.8581,
+   "elev": 9
+  },
+  "temple": {
+   "team": "Temple",
+   "lat": 39.9526,
+   "lon": -75.1652,
+   "elev": 32
+  },
+  "holy cross": {
+   "team": "Holy Cross",
+   "lat": 42.2626,
+   "lon": -71.8023,
+   "elev": 153
+  },
+  "st josephs": {
+   "team": "Saint Joseph's",
+   "lat": 39.9526,
+   "lon": -75.1652,
+   "elev": 32
+  },
+  "northern iowa": {
+   "team": "Northern Iowa",
+   "lat": 42.5349,
+   "lon": -92.4453,
+   "elev": 265
+  },
+  "green bay": {
+   "team": "Green Bay",
+   "lat": 44.5133,
+   "lon": -88.0133,
+   "elev": 179
+  },
+  "cal st bakersfield": {
+   "team": "Cal St. Bakersfield",
+   "lat": 35.3733,
+   "lon": -119.0187,
+   "elev": 124
+  },
+  "stony brook": {
+   "team": "Stony Brook",
+   "lat": 40.9257,
+   "lon": -73.1409,
+   "elev": 28
+  },
+  "weber st": {
+   "team": "Weber St.",
+   "lat": 41.223,
+   "lon": -111.9738,
+   "elev": 1316
+  },
+  "hampton": {
+   "team": "Hampton",
+   "lat": 37.0299,
+   "lon": -76.3452,
+   "elev": 3
+  },
+  "little rock": {
+   "team": "Little Rock",
+   "lat": 36.0627,
+   "lon": -94.1606,
+   "elev": 430
+  },
+  "utah": {
+   "team": "Utah",
+   "lat": 40.7608,
+   "lon": -111.891,
+   "elev": 1302
+  },
+  "fresno st": {
+   "team": "Fresno St.",
+   "lat": 36.7378,
+   "lon": -119.7871,
+   "elev": 91
+  },
+  "valparaiso": {
+   "team": "Valparaiso",
+   "lat": 41.4731,
+   "lon": -87.0611,
+   "elev": 247
+  },
+  "coastal carolina": {
+   "team": "Coastal Carolina",
+   "lat": 33.836,
+   "lon": -79.0478,
+   "elev": 15
+  },
+  "harvard": {
+   "team": "Harvard",
+   "lat": 42.3736,
+   "lon": -71.1097,
+   "elev": 13
+  },
+  "lafayette": {
+   "team": "Lafayette",
+   "lat": 40.6884,
+   "lon": -75.2207,
+   "elev": 96
+  },
+  "wyoming": {
+   "team": "Wyoming",
+   "lat": 41.3114,
+   "lon": -105.5911,
+   "elev": 2186
+  },
+  "albany": {
+   "team": "Albany",
+   "lat": 42.6526,
+   "lon": -73.7562,
+   "elev": 50
+  },
+  "tulsa": {
+   "team": "Tulsa",
+   "lat": 36.154,
+   "lon": -95.9928,
+   "elev": 226
+  },
+  "western michigan": {
+   "team": "Western Michigan",
+   "lat": 42.2917,
+   "lon": -85.5872,
+   "elev": 239
+  },
+  "stanford": {
+   "team": "Stanford",
+   "lat": 37.4241,
+   "lon": -122.1661,
+   "elev": 35
+  },
+  "eastern kentucky": {
+   "team": "Eastern Kentucky",
+   "lat": 37.7479,
+   "lon": -84.2947,
+   "elev": 293
+  },
+  "george washington": {
+   "team": "George Washington",
+   "lat": 38.9072,
+   "lon": -77.0369,
+   "elev": 25
+  },
+  "north carolina central": {
+   "team": "North Carolina Central",
+   "lat": 35.994,
+   "lon": -78.8986,
+   "elev": 124
+  },
+  "milwaukee": {
+   "team": "Milwaukee",
+   "lat": 43.0389,
+   "lon": -87.9065,
+   "elev": 189
+  },
+  "american": {
+   "team": "American",
+   "lat": 38.9072,
+   "lon": -77.0369,
+   "elev": 25
+  },
+  "cal poly": {
+   "team": "Cal Poly",
+   "lat": 35.2828,
+   "lon": -120.6596,
+   "elev": 75
+  },
+  "manhattan": {
+   "team": "Manhattan",
+   "lat": 40.8996,
+   "lon": -73.9088,
+   "elev": 68
+  },
+  "massachusetts": {
+   "team": "Massachusetts",
+   "lat": 42.3732,
+   "lon": -72.5199,
+   "elev": 100
+  },
+  "mercer": {
+   "team": "Mercer",
+   "lat": 32.8407,
+   "lon": -83.6324,
+   "elev": 119
+  },
+  "north carolina at": {
+   "team": "North Carolina A&T",
+   "lat": 36.0726,
+   "lon": -79.792,
+   "elev": 257
+  },
+  "southern": {
+   "team": "Southern",
+   "lat": 30.4515,
+   "lon": -91.1871,
+   "elev": 18
+  },
+  "la salle": {
+   "team": "La Salle",
+   "lat": 39.9526,
+   "lon": -75.1652,
+   "elev": 32
+  },
+  "northwestern st": {
+   "team": "Northwestern St.",
+   "lat": 31.7607,
+   "lon": -93.0863,
+   "elev": 39
+  },
+  "unlv": {
+   "team": "UNLV",
+   "lat": 36.1716,
+   "lon": -115.1391,
+   "elev": 614
+  },
+  "pacific": {
+   "team": "Pacific",
+   "lat": 37.9577,
+   "lon": -121.2908,
+   "elev": 5
+  },
+  "lehigh": {
+   "team": "Lehigh",
+   "lat": 40.6259,
+   "lon": -75.3705,
+   "elev": 110
+  },
+  "liu brooklyn": {
+   "team": "LIU Brooklyn",
+   "lat": 40.6782,
+   "lon": -73.9442,
+   "elev": 23
+  },
+  "southern miss": {
+   "team": "Southern Miss",
+   "lat": 31.3271,
+   "lon": -89.2903,
+   "elev": 53
+  },
+  "loyola md": {
+   "team": "Loyola MD",
+   "lat": 39.2904,
+   "lon": -76.6122,
+   "elev": 29
+  },
+  "south florida": {
+   "team": "South Florida",
+   "lat": 27.9506,
+   "lon": -82.4572,
+   "elev": 9
+  },
+  "detroit": {
+   "team": "Detroit",
+   "lat": 42.3314,
+   "lon": -83.0458,
+   "elev": 182
+  },
+  "utsa": {
+   "team": "UTSA",
+   "lat": 29.4252,
+   "lon": -98.4946,
+   "elev": 203
+  },
+  "george mason": {
+   "team": "George Mason",
+   "lat": 38.8462,
+   "lon": -77.3064,
+   "elev": 134
+  },
+  "indiana st": {
+   "team": "Indiana St.",
+   "lat": 39.4667,
+   "lon": -87.4139,
+   "elev": 150
+  },
+  "northern colorado": {
+   "team": "Northern Colorado",
+   "lat": 40.4233,
+   "lon": -104.7091,
+   "elev": 1426
+  },
+  "boston university": {
+   "team": "Boston University",
+   "lat": 42.3601,
+   "lon": -71.0589,
+   "elev": 9
+  },
+  "utep": {
+   "team": "UTEP",
+   "lat": 31.7619,
+   "lon": -106.485,
+   "elev": 1135
+  },
+  "wake forest": {
+   "team": "Wake Forest",
+   "lat": 36.0999,
+   "lon": -80.2442,
+   "elev": 287
+  },
+  "cornell": {
+   "team": "Cornell",
+   "lat": 42.444,
+   "lon": -76.5019,
+   "elev": 124
+  },
+  "morgan st": {
+   "team": "Morgan St.",
+   "lat": 39.2904,
+   "lon": -76.6122,
+   "elev": 29
+  },
+  "arkansas pine bluff": {
+   "team": "Arkansas Pine Bluff",
+   "lat": 36.0627,
+   "lon": -94.1606,
+   "elev": 430
+  },
+  "siena": {
+   "team": "Siena",
+   "lat": 42.7048,
+   "lon": -73.7548,
+   "elev": 111
+  },
+  "sam houston st": {
+   "team": "Sam Houston St.",
+   "lat": 30.7235,
+   "lon": -95.5508,
+   "elev": 113
+  },
+  "boston college": {
+   "team": "Boston College",
+   "lat": 42.3329,
+   "lon": -71.1728,
+   "elev": 74
+  },
+  "cal st northridge": {
+   "team": "Cal St. Northridge",
+   "lat": 34.2381,
+   "lon": -118.5301,
+   "elev": 271
+  },
+  "portland st": {
+   "team": "Portland St.",
+   "lat": 45.5152,
+   "lon": -122.6784,
+   "elev": 25
+  },
+  "binghamton": {
+   "team": "Binghamton",
+   "lat": 42.0987,
+   "lon": -75.918,
+   "elev": 266
+  },
+  "south alabama": {
+   "team": "South Alabama",
+   "lat": 30.6954,
+   "lon": -88.0399,
+   "elev": 3
+  },
+  "ut arlington": {
+   "team": "UT Arlington",
+   "lat": 32.7357,
+   "lon": -97.1081,
+   "elev": 187
+  },
+  "mississippi valley st": {
+   "team": "Mississippi Valley St.",
+   "lat": 33.4504,
+   "lon": -88.8184,
+   "elev": 101
+  },
+  "san diego": {
+   "team": "San Diego",
+   "lat": 32.7157,
+   "lon": -117.1611,
+   "elev": 20
+  }
+ },
+ "supplement": {
+  "about": "High-altitude programs with no tournament appearance since 2008, so not in the Kaggle locations file. Approximate campus-city elevation in meters (public reference values); entered by hand.",
+  "schools": {
+   "air force": {
+    "team": "Air Force",
+    "elev": 2210
+   },
+   "denver": {
+    "team": "Denver",
+    "elev": 1609
+   },
+   "northern arizona": {
+    "team": "Northern Arizona",
+    "elev": 2106
+   },
+   "southern utah": {
+    "team": "Southern Utah",
+    "elev": 1845
+   },
+   "utah valley": {
+    "team": "Utah Valley",
+    "elev": 1387
+   },
+   "idaho st": {
+    "team": "Idaho St.",
+    "elev": 1360
+   }
+  }
+ }
+}

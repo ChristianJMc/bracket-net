@@ -1,0 +1,95 @@
+{
+ "started": "2026-11-07T04:58:48.741Z",
+ "node": "v24.21.0",
+ "args": [
+  "--full"
+ ],
+ "stages": [
+  {
+   "name": "dataset",
+   "status": "unchanged"
+  },
+  {
+   "name": "kaggle",
+   "status": "unchanged"
+  },
+  {
+   "name": "players",
+   "status": "unchanged"
+  },
+  {
+   "name": "elo",
+   "status": "unchanged"
+  },
+  {
+   "name": "schedule",
+   "status": "unchanged"
+  },
+  {
+   "name": "validate",
+   "status": "ok",
+   "seconds": 3
+  },
+  {
+   "name": "tune-importance",
+   "status": "not requested"
+  },
+  {
+   "name": "train-base",
+   "status": "unchanged"
+  },
+  {
+   "name": "walkforward",
+   "status": "ok",
+   "seconds": 442
+  },
+  {
+   "name": "control",
+   "status": "ok",
+   "seconds": 39
+  },
+  {
+   "name": "ablate-opinion",
+   "status": "ok",
+   "seconds": 33
+  },
+  {
+   "name": "ablate-hybrid",
+   "status": "ok",
+   "seconds": 36
+  },
+  {
+   "name": "ablate-projection",
+   "status": "ok",
+   "seconds": 38
+  },
+  {
+   "name": "checks",
+   "status": "failed",
+   "seconds": 1
+  }
+ ],
+ "dependencies": {
+  "@anthropic-ai/sdk": "1.4.0",
+  "hyparquet": "1.31.2",
+  "zod": "4.6.7"
+ },
+ "seconds": 596,
+ "hashes": {
+  "code": "70dd489c8cd8eecb13a2b143db9e5c120f212e7c8ce3d0e2bd11850ef9f2afe9",
+  "inputs": "356d2ae31bc38daca0193d0cc4b8ae0911285ae68dc3c0edd034eae7bf98f7e1",
+  "config": "b9d1fb098cc1506887c12c369cbc6d7e5587731c84b82c2d16b1d0a74a925d2c"
+ },
+ "results": {
+  "adopted": "ridgeB",
+  "logLoss": {
+   "seed": 0.5764,
+   "em": 0.5517,
+   "elo": 0.5718,
+   "stageA": 0.5493,
+   "ridgeB": 0.5488,
+   "nnB": 0.549,
+   "blend": 0.5497
+  }
+ }
+}

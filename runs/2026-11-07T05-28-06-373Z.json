@@ -1,0 +1,38 @@
+{
+ "started": "2026-11-07T05:28:06.373Z",
+ "node": "v24.21.0",
+ "args": [
+  "--until",
+  "dataset"
+ ],
+ "stages": [
+  {
+   "name": "dataset",
+   "status": "ok",
+   "seconds": 13
+  }
+ ],
+ "dependencies": {
+  "@anthropic-ai/sdk": "1.4.0",
+  "hyparquet": "1.31.2",
+  "zod": "4.6.7"
+ },
+ "seconds": 14,
+ "hashes": {
+  "code": "f9b713ea5ef5fd209d037a0e1b33f033290c7f04ecfa59fbb1cc18632f4bb761",
+  "inputs": "228bd554ca0ae21923e6fbe6e5436489f5a680b400f958a3433431faa2dd6eaf",
+  "config": "188a5d4a99062325ec4564dc9e7e84a15fe19200265379aa210a1d1fd7372c89"
+ },
+ "results": {
+  "adopted": "em",
+  "logLoss": {
+   "seed": 0.5764,
+   "em": 0.5517,
+   "elo": 0.5718,
+   "stageA": 0.5493,
+   "ridgeB": 0.551,
+   "nnB": 0.5497,
+   "blend": 0.5505
+  }
+ }
+}

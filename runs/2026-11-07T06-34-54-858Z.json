@@ -1,0 +1,128 @@
+{
+ "started": "2026-11-07T06:34:54.858Z",
+ "node": "v24.21.0",
+ "args": [
+  "--full"
+ ],
+ "stages": [
+  {
+   "name": "campus",
+   "status": "unchanged"
+  },
+  {
+   "name": "dataset",
+   "status": "unchanged"
+  },
+  {
+   "name": "kaggle",
+   "status": "unchanged"
+  },
+  {
+   "name": "players",
+   "status": "unchanged"
+  },
+  {
+   "name": "elo",
+   "status": "unchanged"
+  },
+  {
+   "name": "schedule",
+   "status": "unchanged"
+  },
+  {
+   "name": "gamectx",
+   "status": "unchanged"
+  },
+  {
+   "name": "derived",
+   "status": "unchanged"
+  },
+  {
+   "name": "tune-importance",
+   "status": "not requested"
+  },
+  {
+   "name": "train-base",
+   "status": "unchanged"
+  },
+  {
+   "name": "coaches",
+   "status": "unchanged"
+  },
+  {
+   "name": "validate",
+   "status": "ok",
+   "seconds": 4
+  },
+  {
+   "name": "walkforward",
+   "status": "ok",
+   "seconds": 610
+  },
+  {
+   "name": "control",
+   "status": "ok",
+   "seconds": 158
+  },
+  {
+   "name": "ablate-opinion",
+   "status": "ok",
+   "seconds": 162
+  },
+  {
+   "name": "ablate-hybrid",
+   "status": "ok",
+   "seconds": 162
+  },
+  {
+   "name": "ablate-projection",
+   "status": "ok",
+   "seconds": 171
+  },
+  {
+   "name": "explain",
+   "status": "ok",
+   "seconds": 2
+  },
+  {
+   "name": "overlap",
+   "status": "ok",
+   "seconds": 3
+  },
+  {
+   "name": "inventory",
+   "status": "ok",
+   "seconds": 2
+  },
+  {
+   "name": "checks",
+   "status": "failed",
+   "seconds": 1
+  }
+ ],
+ "dependencies": {
+  "@anthropic-ai/sdk": "1.4.0",
+  "hyparquet": "1.31.2",
+  "zod": "4.6.7"
+ },
+ "seconds": 1279,
+ "hashes": {
+  "code": "fa0d4b6785d1d52702490c2ccd6c9201c659d76115bf2da97e45ee9c2a749824",
+  "inputs": "228bd554ca0ae21923e6fbe6e5436489f5a680b400f958a3433431faa2dd6eaf",
+  "config": "688af4ef64ec0dd12d1fbbdfaf92033b27315903d95a2ffd5181498c753c664f"
+ },
+ "results": {
+  "adopted": "marginA",
+  "logLoss": {
+   "seed": 0.5764,
+   "em": 0.5511,
+   "elo": 0.5718,
+   "marginA": 0.5482,
+   "stageA": 0.5489,
+   "ridgeB": 0.5499,
+   "nnB": 0.5489,
+   "gbmB": 0.5528,
+   "blend": 0.5467
+  }
+ }
+}

@@ -1,0 +1,111 @@
+{
+ "started": "2026-11-07T05:17:12.171Z",
+ "node": "v24.21.0",
+ "args": [
+  "--full"
+ ],
+ "stages": [
+  {
+   "name": "dataset",
+   "status": "unchanged"
+  },
+  {
+   "name": "kaggle",
+   "status": "ok",
+   "seconds": 3
+  },
+  {
+   "name": "players",
+   "status": "unchanged"
+  },
+  {
+   "name": "elo",
+   "status": "unchanged"
+  },
+  {
+   "name": "schedule",
+   "status": "unchanged"
+  },
+  {
+   "name": "gamectx",
+   "status": "ok",
+   "seconds": 5
+  },
+  {
+   "name": "tune-importance",
+   "status": "not requested"
+  },
+  {
+   "name": "train-base",
+   "status": "unchanged"
+  },
+  {
+   "name": "coaches",
+   "status": "ok",
+   "seconds": 1
+  },
+  {
+   "name": "validate",
+   "status": "ok",
+   "seconds": 3
+  },
+  {
+   "name": "walkforward",
+   "status": "ok",
+   "seconds": 414
+  },
+  {
+   "name": "control",
+   "status": "ok",
+   "seconds": 34
+  },
+  {
+   "name": "ablate-opinion",
+   "status": "ok",
+   "seconds": 31
+  },
+  {
+   "name": "ablate-hybrid",
+   "status": "ok",
+   "seconds": 28
+  },
+  {
+   "name": "ablate-projection",
+   "status": "ok",
+   "seconds": 27
+  },
+  {
+   "name": "overlap",
+   "status": "ok",
+   "seconds": 2
+  },
+  {
+   "name": "checks",
+   "status": "failed",
+   "seconds": 1
+  }
+ ],
+ "dependencies": {
+  "@anthropic-ai/sdk": "1.4.0",
+  "hyparquet": "1.31.2",
+  "zod": "4.6.7"
+ },
+ "seconds": 553,
+ "hashes": {
+  "code": "24cb8c4f2f9cde1dd13648a6308e1306fdb5f9b275339e3625c2f955136570be",
+  "inputs": "228bd554ca0ae21923e6fbe6e5436489f5a680b400f958a3433431faa2dd6eaf",
+  "config": "188a5d4a99062325ec4564dc9e7e84a15fe19200265379aa210a1d1fd7372c89"
+ },
+ "results": {
+  "adopted": "em",
+  "logLoss": {
+   "seed": 0.5764,
+   "em": 0.5517,
+   "elo": 0.5718,
+   "stageA": 0.5493,
+   "ridgeB": 0.551,
+   "nnB": 0.5497,
+   "blend": 0.5505
+  }
+ }
+}

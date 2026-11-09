@@ -1,0 +1,131 @@
+{
+ "started": "2026-11-07T06:14:53.517Z",
+ "node": "v24.21.0",
+ "args": [
+  "--full"
+ ],
+ "stages": [
+  {
+   "name": "campus",
+   "status": "unchanged"
+  },
+  {
+   "name": "dataset",
+   "status": "unchanged"
+  },
+  {
+   "name": "kaggle",
+   "status": "ok",
+   "seconds": 3
+  },
+  {
+   "name": "players",
+   "status": "unchanged"
+  },
+  {
+   "name": "elo",
+   "status": "unchanged"
+  },
+  {
+   "name": "schedule",
+   "status": "unchanged"
+  },
+  {
+   "name": "gamectx",
+   "status": "ok",
+   "seconds": 3
+  },
+  {
+   "name": "derived",
+   "status": "ok",
+   "seconds": 1
+  },
+  {
+   "name": "tune-importance",
+   "status": "not requested"
+  },
+  {
+   "name": "train-base",
+   "status": "unchanged"
+  },
+  {
+   "name": "coaches",
+   "status": "unchanged"
+  },
+  {
+   "name": "validate",
+   "status": "ok",
+   "seconds": 3
+  },
+  {
+   "name": "walkforward",
+   "status": "ok",
+   "seconds": 501
+  },
+  {
+   "name": "control",
+   "status": "ok",
+   "seconds": 153
+  },
+  {
+   "name": "ablate-opinion",
+   "status": "ok",
+   "seconds": 165
+  },
+  {
+   "name": "ablate-hybrid",
+   "status": "ok",
+   "seconds": 161
+  },
+  {
+   "name": "ablate-projection",
+   "status": "ok",
+   "seconds": 157
+  },
+  {
+   "name": "explain",
+   "status": "ok",
+   "seconds": 2
+  },
+  {
+   "name": "overlap",
+   "status": "ok",
+   "seconds": 3
+  },
+  {
+   "name": "inventory",
+   "status": "ok",
+   "seconds": 2
+  },
+  {
+   "name": "checks",
+   "status": "failed",
+   "seconds": 1
+  }
+ ],
+ "dependencies": {
+  "@anthropic-ai/sdk": "1.4.0",
+  "hyparquet": "1.31.2",
+  "zod": "4.6.7"
+ },
+ "seconds": 1157,
+ "hashes": {
+  "code": "ebe74d6df1819f40408f56726147e150bb99f48e62eba1b4923c15f8ce63c097",
+  "inputs": "228bd554ca0ae21923e6fbe6e5436489f5a680b400f958a3433431faa2dd6eaf",
+  "config": "688af4ef64ec0dd12d1fbbdfaf92033b27315903d95a2ffd5181498c753c664f"
+ },
+ "results": {
+  "adopted": "marginA",
+  "logLoss": {
+   "seed": 0.5764,
+   "em": 0.5511,
+   "elo": 0.5718,
+   "marginA": 0.5482,
+   "stageA": 0.5489,
+   "ridgeB": 0.5499,
+   "nnB": 0.5489,
+   "gbmB": 0.554,
+   "blend": 0.5474
+  }
+ }
+}
