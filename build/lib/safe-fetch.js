@@ -41,13 +41,25 @@ function pin(file, url, { update = false } = {}) {
   return h;
 }
 
-async function download(url, dest, { maxBytes = 200e6, update = false, headers = {} } = {}) {
+// fetch() with a deadline covering the whole request, body included, so a host that stops responding fails the step
+// with its name instead of hanging the pipeline. Every outbound request in the project goes through this.
+const DEFAULT_TIMEOUT_MS = 60_000;
+async function fetchWithTimeout(url, opts = {}, ms = DEFAULT_TIMEOUT_MS) {
+  try {
+    return await fetch(url, { ...opts, signal: AbortSignal.timeout(ms) });
+  } catch (e) {
+    if (e.name === 'TimeoutError' || e.name === 'AbortError') throw new Error(`${new URL(url).hostname} did not respond within ${Math.round(ms / 1000)} s (${url})`);
+    throw e;
+  }
+}
+
+async function download(url, dest, { maxBytes = 200e6, update = false, headers = {}, timeoutMs = 180_000 } = {}) {
   if (fs.existsSync(dest)) { pin(dest, url, { update }); return dest; }
   let u = url;
   for (let hop = 0; hop < 5; hop++) {
     if (new URL(u).protocol !== 'https:') throw new Error(`refusing non-HTTPS URL ${u}`);
     if (!hostAllowed(u)) throw new Error(`refusing host ${new URL(u).hostname} (not in ALLOWED_HOSTS in build/lib/safe-fetch.js)`);
-    const res = await fetch(u, { redirect: 'manual', headers: { 'User-Agent': 'BracketNet/1.0 (personal research)', ...headers } });
+    const res = await fetchWithTimeout(u, { redirect: 'manual', headers: { 'User-Agent': 'BracketNet/1.0 (personal research)', ...headers } }, timeoutMs);
     if (res.status >= 300 && res.status < 400 && res.headers.get('location')) { u = new URL(res.headers.get('location'), u).href; continue; }
     if (!res.ok) throw new Error(`${res.status} for ${url}`);
     const len = +res.headers.get('content-length');
@@ -83,4 +95,4 @@ function verifyLock({ only } = {}) {
   return problems;
 }
 
-module.exports = { download, pin, verifyLock, hostAllowed, sha256File, ALLOWED_HOSTS, LOCK };
+module.exports = { download, fetchWithTimeout, pin, verifyLock, hostAllowed, sha256File, ALLOWED_HOSTS, LOCK };

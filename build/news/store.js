@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const { sanitizeText, injectionFlags } = require('./sanitize');
-const { hostAllowed } = require('../lib/safe-fetch');
+const { hostAllowed, fetchWithTimeout } = require('../lib/safe-fetch');
 
 const ROOT = path.join(__dirname, '..', '..');
 const NEWS_DIR = path.join(ROOT, 'data', 'news');
@@ -44,7 +44,7 @@ async function cachedJSON(url, cacheFile, { delayMs = 400 } = {}) {
   if (fs.existsSync(cacheFile)) return JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
   await new Promise(r => setTimeout(r, delayMs));
   if (!hostAllowed(url)) throw new Error(`refusing host ${new URL(url).hostname}`);
-  const res = await fetch(url, { headers: { 'User-Agent': 'BracketNet/1.0 (personal research)' } });
+  const res = await fetchWithTimeout(url, { headers: { 'User-Agent': 'BracketNet/1.0 (personal research)' } }, 30_000);
   if (!res.ok) throw new Error(`${res.status} ${url}`);
   const text = await res.text();
   if (text.length > 20e6) throw new Error(`response from ${url} is over 20 MB`);

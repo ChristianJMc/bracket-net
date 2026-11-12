@@ -125,3 +125,42 @@ test('data validation catches non-numbers, unknown teams and a swapped season', 
   assert.ok(r.problems.some(p => /Not A Real Team/.test(p)));
   assert.ok(r.quarantine.some(q => q.column === 'elo' && q.year === 2019));
 });
+
+test('a host that never answers fails with its name instead of hanging', async () => {
+  const http = require('http');
+  const { fetchWithTimeout } = require('../build/lib/safe-fetch');
+  const server = http.createServer(() => {}).listen(0); // accepts the connection, never responds
+  try {
+    const url = `http://127.0.0.1:${server.address().port}/`;
+    const t0 = Date.now();
+    await assert.rejects(fetchWithTimeout(url, {}, 300), /127\.0\.0\.1 did not respond within/);
+    assert.ok(Date.now() - t0 < 5000);
+  } finally { server.closeAllConnections(); server.close(); }
+});
+
+test('every outbound request goes through the timeout helper', () => {
+  const { execSync } = require('child_process');
+  const hits = execSync('git grep -n "await fetch(" -- build', { cwd: ROOT, encoding: 'utf8' }).trim().split('\n');
+  assert.deepStrictEqual(hits.map(h => h.split(':')[0]), ['build/lib/safe-fetch.js']);
+});
+
+test('news extraction prices each run and is capped by default', async () => {
+  const { costOf } = await import('../build/news/extract.mjs');
+  assert.strictEqual(costOf({ input_tokens: 1e6, output_tokens: 1e6 }), 24);
+  assert.ok(Math.abs(costOf({ input_tokens: 5000, output_tokens: 1500, cache_read_input_tokens: 2000 }) - 0.0504) < 1e-9);
+  const src = fs.readFileSync(path.join(ROOT, 'build', 'news', 'extract.mjs'), 'utf8');
+  assert.match(src, /DEFAULT_LIMIT = 25, DEFAULT_MAX_USD = 5/);
+});
+
+test('the public site loads nothing from other hosts', needs('public/index.html'), () => {
+  const html = fs.readFileSync(path.join(ROOT, 'public', 'index.html'), 'utf8');
+  const external = [...html.matchAll(/<(?:link|script|img|iframe|source)\b[^>]*(?:href|src)="(https?:)?\/\/[^"]*"/g)].map(m => m[0].slice(0, 80));
+  assert.deepStrictEqual(external, []);
+  assert.ok(!/fonts\.googleapis|fonts\.gstatic/.test(html));
+  for (const f of ['barlow-condensed-700.woff2', 'ibm-plex-sans.woff2', 'ibm-plex-mono-400.woff2']) assert.ok(fs.existsSync(path.join(ROOT, 'public', 'fonts', f)), f);
+  const csp = JSON.parse(fs.readFileSync(path.join(ROOT, 'vercel.json'), 'utf8')).headers[0].headers.find(h => h.key === 'Content-Security-Policy').value;
+  assert.match(csp, /font-src 'self'/);
+  assert.ok(!/googleapis|gstatic/.test(csp));
+  assert.match(html, /How AI is used\./);
+  assert.match(html, /Privacy\./);
+});

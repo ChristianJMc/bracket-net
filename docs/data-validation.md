@@ -32,5 +32,5 @@ None.
 - trn_hi: 71 value(s) over 10 robust SDs from the median: 2015 Eastern Washington 79; 2015 Texas Southern 110; 2015 UAB 95; 2016 Austin Peay 119
 - ap_preseason_votes: 495 value(s) over 10 robust SDs from the median: 2008 Arizona 499; 2008 Arkansas 468; 2008 Butler 114; 2008 Clemson 83
 - ap_final_votes: 462 value(s) over 10 robust SDs from the median: 2008 Butler 841; 2008 BYU 327; 2008 Connecticut 736; 2008 Davidson 334
-- coach_tourney_resid: 12 value(s) over 10 robust SDs from the median: 2013 Butler 4.848; 2015 Kentucky 4.734; 2016 Kentucky 4.643; 2016 Michigan St. 5.016
+- coach_tourney_resid: 12 value(s) over 10 robust SDs from the median: 2013 Butler 4.866; 2015 Kentucky 4.712; 2016 Kentucky 4.621; 2016 Michigan St. 5.019
 - dv_campus_elev: 7 value(s) over 10 robust SDs from the median: 2012 Colorado 1.627; 2013 Colorado 1.627; 2014 Colorado 1.627; 2015 Wyoming 2.186

@@ -95,3 +95,14 @@ test('Massey ordinals: last list before Selection Sunday, polls kept apart, unkn
     assert.ok(out.unmatched.some(u => /Nowhere St/.test(u)));
   } finally { fs.rmSync(dir, { recursive: true, force: true }); }
 });
+
+test('game dates are the same calendar day in every time zone', () => {
+  const { parseDate } = require('../build/lib/sked');
+  const saved = process.env.TZ;
+  try {
+    for (const tz of ['America/Denver', 'UTC', 'Asia/Tokyo', 'Pacific/Kiritimati']) {
+      process.env.TZ = tz;
+      assert.strictEqual(new Date(parseDate('3/21/24')).toISOString().slice(0, 10), '2024-03-21', tz);
+    }
+  } finally { if (saved === undefined) delete process.env.TZ; else process.env.TZ = saved; }
+});

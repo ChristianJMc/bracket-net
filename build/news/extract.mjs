@@ -3,10 +3,13 @@
 // Writes data/news-factors/YEAR.json. Needs Anthropic credentials (ANTHROPIC_API_KEY or `ant auth login`).
 //
 // Usage:
-//   node build/news/extract.mjs --year 2024 [--misses-only] [--controls 10] [--limit N] [--dry-run]
+//   node build/news/extract.mjs --year 2024 [--misses-only] [--controls 10] [--limit N | --all] [--max-usd 5] [--dry-run]
 //     --misses-only  only games the model got wrong (reads data/misses.json from build/review.js)
 //     --controls N   also N correctly predicted games per year, so factor rates can be compared to a baseline
-//     --dry-run      print the first prompt and the game count; no API calls
+//     --limit N      at most N games this run (default 25); --all removes the limit
+//     --max-usd X    stop once this run has spent X dollars (default 5), from the token counts the API reports
+//     --dry-run      print the first prompt, the game count and the limits; no API calls
+// Every request costs money. Results are saved after each game, so a stopped run resumes where it left off.
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { createRequire } from 'node:module';
@@ -20,6 +23,11 @@ const require = createRequire(import.meta.url);
 const { sanitizeText, injectionFlags, verifyFactors } = require('./sanitize.js');
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const MODEL = 'claude-opus-5-5';
+const DEFAULT_LIMIT = 25, DEFAULT_MAX_USD = 5;
+// Claude Opus 5.5 list prices, dollars per million tokens (check current pricing before relying on the cap).
+const PRICE = { input: 4, output: 20, cacheWrite: 5, cacheRead: 0.2 };
+export const costOf = (u = {}) => ((u.input_tokens || 0) * PRICE.input + (u.output_tokens || 0) * PRICE.output +
+  (u.cache_creation_input_tokens || 0) * PRICE.cacheWrite + (u.cache_read_input_tokens || 0) * PRICE.cacheRead) / 1e6;
 
 export const FACTORS = [
   'hot_three_point_shooting', 'cold_three_point_shooting', 'free_throw_shooting', 'forced_turnovers',
@@ -117,24 +125,30 @@ async function extractOne(client, g) {
 async function main() {
   const arg = (n) => { const i = process.argv.indexOf(n); return i > 0 ? process.argv[i + 1] : null; };
   const year = +arg('--year');
-  if (!year) { console.error('usage: node build/news/extract.mjs --year 2024 [--misses-only] [--controls N] [--limit N] [--dry-run]'); process.exit(1); }
+  if (!year) { console.error('usage: node build/news/extract.mjs --year 2024 [--misses-only] [--controls N] [--limit N | --all] [--max-usd X] [--dry-run]'); process.exit(1); }
   let games = selectGames(year, { missesOnly: process.argv.includes('--misses-only'), controls: +(arg('--controls') || 0) });
-  if (arg('--limit')) games = games.slice(0, +arg('--limit'));
   const outFile = path.join(ROOT, 'data', 'news-factors', `${year}.json`);
   const out = fs.existsSync(outFile) ? JSON.parse(fs.readFileSync(outFile, 'utf8')) : { year, model: MODEL, games: {} };
   for (const g of games) if (g.flagged.length) console.log(`${g.key}: held back ${g.flagged.length} item(s) that look like prompt injection: ${g.flagged.map(x => x.flags.join('/')).join('; ')}`);
   games = games.filter(g => g.items.length);
-  const todo = games.filter(g => !out.games[g.key] || out.games[g.key].error);
-  console.log(`${year}: ${games.length} games with text, ${todo.length} still to extract`);
+  const remaining = games.filter(g => !out.games[g.key] || out.games[g.key].error);
+  const limit = process.argv.includes('--all') ? Infinity : +(arg('--limit') || DEFAULT_LIMIT);
+  const maxUsd = +(arg('--max-usd') || DEFAULT_MAX_USD);
+  if (!(limit > 0) || !(maxUsd > 0)) { console.error('--limit and --max-usd must be positive numbers'); process.exit(1); }
+  const todo = remaining.slice(0, limit);
+  console.log(`${year}: ${games.length} games with text, ${remaining.length} still to extract; this run: up to ${todo.length} games, stopping at $${maxUsd.toFixed(2)}`);
   if (process.argv.includes('--dry-run')) {
     if (todo[0]) console.log('\n--- first prompt ---\n' + prompt(todo[0].game, todo[0].items).slice(0, 3000));
     return;
   }
   const client = new Anthropic();
+  let spent = 0, done = 0;
   for (const g of todo) {
+    if (spent >= maxUsd) { console.log(`Stopped: this run spent $${spent.toFixed(2)}, the --max-usd limit. Rerun to continue.`); break; }
     try {
       const r = await extractOne(client, g);
       out.games[g.key] = { ...r, extractedAt: new Date().toISOString() };
+      spent += costOf(r.usage); done++;
       console.log(`${g.key}: ${r.error || r.factors.decisive_factors.map(f => f.factor).join(', ')}`);
     } catch (e) {
       if (e instanceof Anthropic.AuthenticationError) { console.error('Anthropic credentials missing or invalid. Set ANTHROPIC_API_KEY or run `ant auth login`.'); process.exit(1); }
@@ -145,6 +159,7 @@ async function main() {
     fs.mkdirSync(path.dirname(outFile), { recursive: true });
     fs.writeFileSync(outFile, JSON.stringify(out, null, 1));
   }
+  console.log(`${done} game(s) extracted this run, about $${spent.toFixed(2)}.`);
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) main();

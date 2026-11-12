@@ -1,7 +1,9 @@
 // Barttorvik season game files (raw/skedYYYY.json) → one record per D-I game with both box scores.
+// Game dates are calendar dates with no time, so they're kept as UTC midnight: the same timestamp on every machine,
+// whatever its time zone (local midnight would put a game on the previous day anywhere east of UTC).
 function parseDate(s) {
   const [m, d, y] = s.split('/').map(Number);
-  return new Date(y < 100 ? 2000 + y : y, m - 1, d).getTime();
+  return Date.UTC(y < 100 ? 2000 + y : y, m - 1, d);
 }
 
 function seasonGames(sked) {

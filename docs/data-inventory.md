@@ -6,11 +6,11 @@ Every input the models can use, grouped by source, with how verifiable it is and
 
 | Kind | What it is | Candidates | Strongest link to the base model's misses | Median | Columns ever selected |
 |---|---|---|---|---|---|
-| counted | It happened and was recorded (rebounds, shots, minutes, miles, records) | 286 | 0.096 | 0.020 | 6 |
+| counted | It happened and was recorded (rebounds, shots, minutes, miles, records) | 286 | 0.095 | 0.020 | 7 |
 | calculated | A formula applied to counted stats (efficiency ratings, Elo) | 120 | 0.075 | 0.020 | 0 |
 | forecast | A formula's guess before the season | 16 | 0.113 | 0.032 | 1 |
 | judgment | People deciding with stats in hand (seeds, recruiting rankings) | 10 | 0.067 | 0.036 | 0 |
-| opinion | What people think (AP votes, analysts' picks) | 11 | 0.108 | 0.054 | 1 |
+| opinion | What people think (AP votes, analysts' picks) | 11 | 0.109 | 0.054 | 1 |
 
 Every kind passes through the same screen with the same bar. Judgment and opinion carry a larger penalty once inside the model (2× and 4×), so they need more evidence, but they are never excluded. When an opinion is right, as AP preseason rank sometimes is, the model can still use it.
 
@@ -20,30 +20,30 @@ Rise in tournament log loss when one input is scrambled. Bigger means more impor
 
 | Input | Importance |
 |---|---|
-| Strength of schedule | 0.0267 |
-| Adjusted efficiency margin | 0.0249 |
-| Adjusted offense | 0.0134 |
+| Strength of schedule | 0.0270 |
+| Adjusted efficiency margin | 0.0247 |
+| Adjusted offense | 0.0137 |
 | Adjusted defense | 0.0052 |
-| Forced turnover rate | 0.0052 |
+| Forced turnover rate | 0.0051 |
 | Turnover rate | 0.0030 |
-| Last-10-game form | 0.0029 |
-| Opponent off. rebound rate | 0.0022 |
-| Offensive rebound rate | 0.0018 |
+| Last-10-game form | 0.0028 |
+| Opponent off. rebound rate | 0.0021 |
+| Offensive rebound rate | 0.0017 |
 | Block rate | 0.0017 |
-| Win % | 0.0015 |
-| Steal rate | 0.0009 |
+| Win % | 0.0014 |
+| Steal rate | 0.0010 |
 | 2-point % | 0.0004 |
-| 3-point attempt rate | 0.0003 |
+| 3-point attempt rate | 0.0004 |
 | Game-to-game volatility | 0.0001 |
-| Opponent 3-point % | 0.0001 |
-| Adjusted tempo | 0.0001 |
-| Opponent free throw rate | 0.0000 |
-| Effective FG% | -0.0001 |
+| Opponent free throw rate | 0.0001 |
+| Opponent 3-point % | 0.0000 |
+| Adjusted tempo | 0.0000 |
+| Effective FG% | -0.0000 |
 | Luck (win % vs. expected) | -0.0001 |
 | Free throw % | -0.0001 |
 | 3-point % | -0.0002 |
-| Free throw rate | -0.0002 |
-| Assist rate | -0.0004 |
+| Free throw rate | -0.0003 |
+| Assist rate | -0.0003 |
 | Opponent effective FG% | -0.0004 |
 | Opponent 2-point % | -0.0008 |
 
@@ -55,19 +55,19 @@ Rise in tournament log loss when one input is scrambled. Bigger means more impor
 |---|---|---|---|---|---|
 | Kaggle: KenPom Barttorvik | 55 | counted 29, calculated 24, judgment 2 | 0.072 (kb_ftr_rank) | 8 | kb_avg_hgt (6), kb_eff_hgt (8) |
 | Kaggle: KenPom Preseason | 11 | forecast 11 | 0.113 (kpre_kadj_em_change) | 2 | kpre_kadj_em_change (2) |
-| Game context (altitude, pressure, body clock, crowd, home listing, head-to-head) | 10 | counted 9, judgment 1 | 0.091 (gm_elev_gain) | 2 | gm_elev_gain (2) |
 | Kaggle: AP Poll Data | 6 | opinion 6 | -0.105 (ap_preseason_rank) | 1 | ap_preseason_rank (1) |
+| Game context (altitude, pressure, body clock, crowd, home listing, head-to-head) | 10 | counted 9, judgment 1 | 0.091 (gm_elev_gain) | 1 | gm_elev_gain (1), gm_campus_elev (1) |
 | Kaggle: Conference Stats | 39 | counted 32, calculated 6, judgment 1 | -0.079 (conf_3ptr) | 1 | conf_eff_hgt (1) |
-| Kaggle: Shooting Splits | 32 | counted 32 | -0.055 (shot_threes_fgpctd) | 1 | shot_threes_fgpctd_rank (1) |
+| Kaggle: Shooting Splits | 32 | counted 32 | -0.054 (shot_threes_fgpctd) | 1 | shot_threes_fgpctd_rank (1) |
 | Kaggle locations: travel | 2 | counted 2 | -0.026 (g_travel_miles) | 1 | g_travel_miles (1) |
-| Kaggle: Heat Check Ratings | 5 | opinion 5 | 0.108 (hc_easy_draw) | 0 |  |
-| Kaggle: Barttorvik Neutral | 79 | counted 65, calculated 12, judgment 2 | -0.096 (btn_efgpct_rank) | 0 |  |
+| Kaggle: Heat Check Ratings | 5 | opinion 5 | 0.109 (hc_easy_draw) | 0 |  |
+| Kaggle: Barttorvik Neutral | 79 | counted 65, calculated 12, judgment 2 | -0.095 (btn_efgpct_rank) | 0 |  |
 | Engineered (home boost, neutral gap, campus elevation) | 5 | counted 1, calculated 4 | -0.090 (dv_campus_elev) | 0 |  |
-| Kaggle: Teamsheet Ranks | 24 | counted 12, calculated 12 | -0.073 (ts_wab_rank) | 0 |  |
+| Kaggle: Teamsheet Ranks | 24 | counted 12, calculated 12 | -0.072 (ts_wab_rank) | 0 |  |
 | Our game logs: spark stats | 14 | counted 14 | 0.072 (mo_streaky) | 0 |  |
 | Kaggle: EvanMiya | 25 | counted 10, calculated 15 | -0.071 (em_kill_shots_conceded_per_game) | 0 |  |
 | Our ratings: home-court edge | 1 | calculated 1 | -0.071 (hca) | 0 |  |
-| Kaggle: TeamRankings | 38 | counted 30, calculated 8 | -0.071 (tr_luck_v_26_50_loss) | 0 |  |
+| Kaggle: TeamRankings | 38 | counted 30, calculated 8 | -0.070 (tr_luck_v_26_50_loss) | 0 |  |
 | Our game logs: tournament runs and program history | 9 | counted 9 | 0.069 (prog_wins5) | 0 |  |
 | ESPN player box scores | 11 | counted 11 | -0.065 (pl_top3_absent_last) | 0 |  |
 | Kaggle: Z Rating Teams | 3 | judgment 3 | 0.057 (z_z_rating) | 0 |  |

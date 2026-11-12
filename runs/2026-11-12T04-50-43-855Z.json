@@ -1,0 +1,137 @@
+{
+ "started": "2026-11-12T04:50:43.855Z",
+ "node": "v24.21.0",
+ "args": [
+  "--full"
+ ],
+ "stages": [
+  {
+   "name": "campus",
+   "status": "unchanged"
+  },
+  {
+   "name": "dataset",
+   "status": "ok",
+   "seconds": 21
+  },
+  {
+   "name": "kaggle",
+   "status": "ok",
+   "seconds": 2
+  },
+  {
+   "name": "players",
+   "status": "unchanged"
+  },
+  {
+   "name": "elo",
+   "status": "ok",
+   "seconds": 3
+  },
+  {
+   "name": "schedule",
+   "status": "unchanged"
+  },
+  {
+   "name": "gamectx",
+   "status": "unchanged"
+  },
+  {
+   "name": "massey",
+   "status": "not requested"
+  },
+  {
+   "name": "derived",
+   "status": "unchanged"
+  },
+  {
+   "name": "tune-importance",
+   "status": "not requested"
+  },
+  {
+   "name": "train-base",
+   "status": "ok",
+   "seconds": 67
+  },
+  {
+   "name": "coaches",
+   "status": "ok",
+   "seconds": 1
+  },
+  {
+   "name": "validate",
+   "status": "ok",
+   "seconds": 3
+  },
+  {
+   "name": "walkforward",
+   "status": "ok",
+   "seconds": 537
+  },
+  {
+   "name": "control",
+   "status": "ok",
+   "seconds": 149
+  },
+  {
+   "name": "ablate-opinion",
+   "status": "ok",
+   "seconds": 146
+  },
+  {
+   "name": "ablate-hybrid",
+   "status": "ok",
+   "seconds": 140
+  },
+  {
+   "name": "ablate-projection",
+   "status": "ok",
+   "seconds": 151
+  },
+  {
+   "name": "explain",
+   "status": "ok",
+   "seconds": 1
+  },
+  {
+   "name": "overlap",
+   "status": "ok",
+   "seconds": 2
+  },
+  {
+   "name": "inventory",
+   "status": "ok",
+   "seconds": 1
+  },
+  {
+   "name": "checks",
+   "status": "failed",
+   "seconds": 0
+  }
+ ],
+ "dependencies": {
+  "@anthropic-ai/sdk": "1.4.0",
+  "hyparquet": "1.31.2",
+  "zod": "4.6.7"
+ },
+ "seconds": 1230,
+ "hashes": {
+  "code": "b9c627165ff18f25db3677e42c0a353325133b8b3a088ccca0bff0e0d56e8d9f",
+  "inputs": "228bd554ca0ae21923e6fbe6e5436489f5a680b400f958a3433431faa2dd6eaf",
+  "config": "c2fadaa92d79e7f96c32ce1912717b12df5d9e8acc3f5ecc0aae6c125e4e02de"
+ },
+ "results": {
+  "adopted": "marginA",
+  "logLoss": {
+   "seed": 0.5764,
+   "em": 0.5511,
+   "elo": 0.5718,
+   "marginA": 0.5482,
+   "stageA": 0.5488,
+   "ridgeB": 0.5498,
+   "nnB": 0.5489,
+   "gbmB": 0.5521,
+   "blend": 0.5466
+  }
+ }
+}

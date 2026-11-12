@@ -43,13 +43,28 @@ if (wf && wf.models) {
 const payload = { teams, games, brackets: data.brackets, model: model.model, eval: model.eval, opts: model.opts, features: model.features, margin, findings };
 const json = JSON.stringify(payload).replace(/</g, '\\u003c');
 const nn = fs.readFileSync(path.join(__dirname, 'nn.js'), 'utf8');
-const page = fs.readFileSync(path.join(ROOT, 'site', 'template.html'), 'utf8')
+const base = fs.readFileSync(path.join(ROOT, 'site', 'template.html'), 'utf8')
   .replace('/*__NN__*/', () => nn).replace('/*__DATA__*/', () => json);
+const FONTS = /<!--fonts:start-->[\s\S]*?<!--fonts:end-->/;
+if (!FONTS.test(base) || !base.includes('<!--__FONTS_NOTE__-->')) throw new Error('site/template.html is missing the fonts markers');
+
+// The Artifact host only allows fonts from Google Fonts, so the claude.ai copy keeps that link and says so.
+const page = base.replace('<!--__FONTS_NOTE__-->', ' Its fonts load from Google Fonts, which receives your IP address.');
 fs.writeFileSync(path.join(ROOT, 'site', 'index.html'), page);
-fs.writeFileSync(path.join(ROOT, 'site', 'preview.html'),
-  '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">' +
-  '<style>[hidden]{display:none!important}body{margin:0}</style></head><body>' + page + '</body></html>');
-// The same full page as the static site Vercel serves (public/index.html).
-fs.mkdirSync(path.join(ROOT, 'public'), { recursive: true });
-fs.copyFileSync(path.join(ROOT, 'site', 'preview.html'), path.join(ROOT, 'public', 'index.html'));
-console.log(`site/index.html ${(page.length / 1024).toFixed(0)}KB`);
+
+// The public site serves its own fonts (site/fonts, SIL Open Font License), so visitors' browsers contact no one else.
+const face = (family, file, weight) => `@font-face{font-family:"${family}";src:url("/fonts/${file}") format("woff2");font-weight:${weight};font-style:normal;font-display:swap}`;
+const selfHosted = '<style>' + [
+  face('Barlow Condensed', 'barlow-condensed-500.woff2', 500), face('Barlow Condensed', 'barlow-condensed-600.woff2', 600),
+  face('Barlow Condensed', 'barlow-condensed-700.woff2', 700), face('IBM Plex Mono', 'ibm-plex-mono-400.woff2', 400),
+  face('IBM Plex Mono', 'ibm-plex-mono-500.woff2', 500), face('IBM Plex Sans', 'ibm-plex-sans.woff2', '100 700'),
+].join('') + '</style>';
+const pub = base.replace(FONTS, () => selfHosted).replace('<!--__FONTS_NOTE__-->', ' Fonts are served from this site, so no other company is contacted.');
+const full = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">' +
+  '<style>[hidden]{display:none!important}body{margin:0}</style></head><body>' + pub + '</body></html>';
+// site/preview.html is the same page for local preview (build/serve.js serves site/, fonts included).
+fs.writeFileSync(path.join(ROOT, 'site', 'preview.html'), full);
+fs.mkdirSync(path.join(ROOT, 'public', 'fonts'), { recursive: true });
+fs.writeFileSync(path.join(ROOT, 'public', 'index.html'), full);
+for (const f of fs.readdirSync(path.join(ROOT, 'site', 'fonts'))) fs.copyFileSync(path.join(ROOT, 'site', 'fonts', f), path.join(ROOT, 'public', 'fonts', f));
+console.log(`site/index.html ${(page.length / 1024).toFixed(0)}KB; public/index.html ${(full.length / 1024).toFixed(0)}KB with ${fs.readdirSync(path.join(ROOT, 'public', 'fonts')).length} font files`);

@@ -1,8 +1,8 @@
 <title>Bracket Net</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<!--fonts:start--><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"><!--fonts:end-->
 <style>
 /* Layout: sticky scorer's-table header, then one working view at a time (bracket / matchup / model) on a cool paper ground. */
 :root {
@@ -147,6 +147,9 @@ svg .grid { stroke: var(--rule-2); }
 #tip { position: fixed; pointer-events: none; background: var(--ink); color: var(--surface); font-size: 12px; padding: 6px 8px; border-radius: 6px; z-index: 20; max-width: 240px; }
 ul.plain { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
 footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; font-size: 13px; color: var(--ink-2); }
+footer .foot { display: grid; gap: 8px; }
+footer .foot p { max-width: 72ch; }
+footer strong { color: var(--ink); font-weight: 600; }
 
 @media (max-width: 720px) {
   .mu-pick { grid-template-columns: 1fr; }
@@ -343,7 +346,11 @@ footer { border-top: 1px solid var(--rule); padding-block: 18px 28px; font-size:
     </div>
   </section>
 </main>
-<footer><div class="wrap">Bracket Net is an independent model and is not affiliated with the NCAA. Probabilities describe uncertainty; they are not guarantees.</div></footer>
+<footer><div class="wrap foot">
+  <p>Bracket Net is an independent model and is not affiliated with the NCAA. Probabilities describe uncertainty; they are not guarantees. Not betting advice.</p>
+  <p><strong>How AI is used.</strong> The forecasts come from statistical models trained on past box scores, not from a generative AI chatbot. During development, Claude (Anthropic) was tested for turning public game coverage into structured notes, such as who was injured. That step isn't used for the forecasts shown here.</p>
+  <p><strong>Privacy.</strong> This site has no accounts, cookies, ads or analytics, and nothing you do here is sent to us. Your browser remembers the last season you viewed, on your device only. Like any website, the host receives standard request logs.<!--__FONTS_NOTE__--></p>
+</div></footer>
 <div id="tip" hidden></div>
 
 <script>/*__NN__*/</script>

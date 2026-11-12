@@ -27,19 +27,19 @@ rppf_radj_em 0.98, kb_kadj_em 0.98, tr_tr_rating 0.97, f38_power_rating 0.97, kb
 
 ## Largest groups of near-duplicates (|r| ≥ 0.9)
 
-1. ts_bpi, rppf_rppf_rating_rank, kb_barthag, ts_quality_avg_rank, ts_quality_avg, kb_badj_em_rank, res_resume, kb_barthag_rank, em_relative_rating_rank, rppf_npb_rating_rank, ts_kp, tr_last, tr_tr_rank, rppf_strem_rank, ts_sag, res_net_rpi, res_b_power, ts_net, kb_kadj_em_rank, rppf_radj_em_rank, ts_kpi
+1. ts_bpi, rppf_rppf_rating_rank, kb_barthag, ts_quality_avg_rank, ts_quality_avg, res_resume, kb_badj_em_rank, kb_barthag_rank, em_relative_rating_rank, rppf_npb_rating_rank, ts_kp, tr_last, tr_tr_rank, rppf_strem_rank, res_net_rpi, ts_sag, res_b_power, ts_net, kb_kadj_em_rank, rppf_radj_em_rank, ts_kpi
 2. conf_elite_sos, kb_elite_sos, kb_elite_sos_rank, rppfconf_npb_rating, conf_badj_o, conf_barthag, conf_badj_em, rppfconf_rppf_rating, conf_badj_d, conf_wab, tr_sos_rating, rppfconf_conf_rank
 3. em_true_tempo_rank, em_true_tempo, rppf_r_pace_rank, kb_badjt_rank, kb_kadj_t_rank, kb_badj_t, rppf_r_pace, kb_kadj_t, kb_k_tempo_rank, kb_k_tempo
 4. z_z_rating, kb_badj_em, em_relative_rating, rppf_rppf_rating, tr_tr_rating, z_z_rating_rank, kb_kadj_em, rppf_radj_em, f38_power_rating, f38_power_rating_rank
 5. em_o_rate, kb_badj_o, kb_kadj_o, rppf_radj_o, rppf_stroe, kb_badj_o_rank, em_o_rate_rank, kb_kadj_o_rank, rppf_radj_o_rank
-6. kb_wab, rppf_npb_rating, ts_sor, elo, res_wab_rank, z_seed_list, ts_resume_avg_rank, ts_resume_avg, seed
+6. kb_wab, rppf_npb_rating, ts_sor, elo, res_wab_rank, ts_resume_avg_rank, z_seed_list, ts_resume_avg, seed
 7. kb_badj_d_rank, em_d_rate_rank, rppf_radj_d_rank, em_d_rate, kb_badj_d, kb_kadj_d_rank, rppf_radj_d, kb_kadj_d
 8. kb_2ptrd, kb_3ptrd, shot_threes_d_share, kb_2ptrd_rank, kb_3ptrd_rank, shot_threes_d_share_rank
-9. shot_threes_share_rank, kb_2ptr, kb_3ptr, shot_threes_share, kb_3ptr_rank, kb_2ptr_rank
+9. shot_threes_share_rank, shot_threes_share, kb_2ptr, kb_3ptr, kb_3ptr_rank, kb_2ptr_rank
 10. btn_badj_em, btn_barthag, btn_barthag_rank, btn_badj_em_rank, trn_tr_rating
 11. rppfpre_rppf_preseason_rank, kpre_preseason_kadj_em_rank, kpre_preseason_kadj_d_rank, tr_hi, tr_lo
-12. gm_elev_gain, gm_campus_elev, gm_pressure_drop, dv_campus_elev
-13. btn_drebpct_rank, btn_op_orebpct_rank, btn_drebpct, btn_op_orebpct
+12. gm_campus_elev, gm_elev_gain, gm_pressure_drop, dv_campus_elev
+13. btn_drebpct_rank, btn_op_orebpct_rank, btn_op_orebpct, btn_drebpct
 14. em_kill_shots_conceded_per_game, em_kill_shots_conceded_per_game_rank, em_total_kill_shots_conceded, em_total_kill_shots_conceded_rank
 15. shot_threes_fgpctd, shot_threes_fgpctd_rank, kb_3ptpctd, kb_3ptpctd_rank
 16. kpre_preseason_kadj_o, rppfpre_preseason_rppf_rating, kpre_preseason_kadj_em, kpre_preseason_kadj_o_rank

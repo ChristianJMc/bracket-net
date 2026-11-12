@@ -3,7 +3,7 @@
 // published before tip-off and stores the article list as pregame items.
 // Usage: node build/news/gdelt.js <year> [--days 10]   (games must have tip-off times from espn.js)
 const { gameKey, load, save, addItem } = require('./store');
-const { hostAllowed } = require('../lib/safe-fetch');
+const { hostAllowed, fetchWithTimeout } = require('../lib/safe-fetch');
 
 const API = 'https://api.gdeltproject.org/api/v2/doc/doc';
 const TERMS = '(injury OR injured OR illness OR sick OR suspended OR questionable OR "out for" OR "will not play")';
@@ -16,7 +16,7 @@ async function search(team, from, to) {
     `&startdatetime=${stamp(from)}&enddatetime=${stamp(to)}`;
   await sleep(6000);
   if (!hostAllowed(url)) throw new Error(`refusing host ${new URL(url).hostname}`);
-  const res = await fetch(url);
+  const res = await fetchWithTimeout(url, {}, 30_000);
   const text = await res.text();
   if (text.length > 20e6) throw new Error('GDELT response over 20 MB');
   if (!text.trim().startsWith('{')) throw new Error(`GDELT: ${text.slice(0, 120)}`);

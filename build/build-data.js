@@ -354,7 +354,7 @@ for (const year of YEARS) {
   }
 
   let snaps = 0;
-  for (let D = new Date(year, 0, 1).getTime(); D < cutoff; D += 14 * DAY) {
+  for (let D = Date.UTC(year, 0, 1); D < cutoff; D += 14 * DAY) { // UTC, like the game dates (build/lib/sked.js)
     const end = Math.min(D + 14 * DAY, cutoff);
     const snap = computeRatings(all.filter(g => g.date < D && g.type !== 3), 8, venuePrior).ratings;
     const key = `${year}-${snaps++}`;
