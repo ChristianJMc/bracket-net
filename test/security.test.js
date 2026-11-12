@@ -162,5 +162,8 @@ test('the public site loads nothing from other hosts', needs('public/index.html'
   assert.match(csp, /font-src 'self'/);
   assert.ok(!/googleapis|gstatic/.test(csp));
   assert.match(html, /How AI is used\./);
+  assert.match(html, /runs offline, only when the site's owner starts it, and its inputs are off by default/);
   assert.match(html, /Privacy\./);
+  assert.match(html, /Fonts are served from this site/);
+  assert.ok(!/analytics/i.test(html.slice(html.indexOf('<footer'))), 'the notice makes no claim about analytics');
 });
