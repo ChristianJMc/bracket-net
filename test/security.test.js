@@ -152,7 +152,7 @@ test('news extraction prices each run and is capped by default', async () => {
   assert.match(src, /DEFAULT_LIMIT = 25, DEFAULT_MAX_USD = 5/);
 });
 
-test('the public site loads nothing from other hosts', needs('public/index.html'), () => {
+test('the public site loads nothing from other hosts (only the disclosed analytics endpoint is contacted)', needs('public/index.html'), () => {
   const html = fs.readFileSync(path.join(ROOT, 'public', 'index.html'), 'utf8');
   const external = [...html.matchAll(/<(?:link|script|img|iframe|source)\b[^>]*(?:href|src)="(https?:)?\/\/[^"]*"/g)].map(m => m[0].slice(0, 80));
   assert.deepStrictEqual(external, []);
@@ -165,5 +165,9 @@ test('the public site loads nothing from other hosts', needs('public/index.html'
   assert.match(html, /runs offline, only when the site's owner starts it, and its inputs are off by default/);
   assert.match(html, /Privacy\./);
   assert.match(html, /Fonts are served from this site/);
-  assert.ok(!/analytics/i.test(html.slice(html.indexOf('<footer'))), 'the notice makes no claim about analytics');
+  // The developer's own first-party analytics is the one off-site request: it must be disclosed in the
+  // footer, served from this site, and be the only extra host the CSP allows to be contacted.
+  assert.match(html.slice(html.indexOf('<footer')), /cookie-free analytics/);
+  assert.match(html, /<script src="\/analytics\/a-1\.js" defer data-project="bracket-net"/);
+  assert.match(csp, /connect-src 'self' https:\/\/christian-mcclellan\.vercel\.app;/);
 });
