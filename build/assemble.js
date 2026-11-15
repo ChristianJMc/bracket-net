@@ -48,6 +48,13 @@ const base = fs.readFileSync(path.join(ROOT, 'site', 'template.html'), 'utf8')
 const FONTS = /<!--fonts:start-->[\s\S]*?<!--fonts:end-->/;
 if (!FONTS.test(base) || !base.includes('<!--__FONTS_NOTE__-->')) throw new Error('site/template.html is missing the fonts markers');
 
+// The public site (not the claude.ai copy) loads the developer's shared, cookie-free usage analytics.
+const ANALYTICS_TAG = '<script src="/analytics/a-1.js" defer data-project="bracket-net" data-endpoint="https://christian-mcclellan.vercel.app/api"' +
+  ' data-production-host="bracket-net.vercel.app" data-privacy-url="https://christian-mcclellan.vercel.app/privacy"></script>';
+const ANALYTICS_NOTE = ' It counts page views, active time, which views you open, errors and approximate location with the developer\'s' +
+  ' cookie-free analytics (no ID that follows you between visits; kept 90 days). Visitors in the EEA, UK and Switzerland are asked first;' +
+  ' Global Privacy Control turns it off. <a href="https://christian-mcclellan.vercel.app/privacy" data-cma-preferences>Privacy choices</a>';
+
 // The Artifact host only allows fonts from Google Fonts, so the claude.ai copy keeps that link and says so.
 const page = base.replace('<!--__FONTS_NOTE__-->', ' Its fonts load from Google Fonts, which receives your IP address.');
 fs.writeFileSync(path.join(ROOT, 'site', 'index.html'), page);
@@ -59,9 +66,9 @@ const selfHosted = '<style>' + [
   face('Barlow Condensed', 'barlow-condensed-700.woff2', 700), face('IBM Plex Mono', 'ibm-plex-mono-400.woff2', 400),
   face('IBM Plex Mono', 'ibm-plex-mono-500.woff2', 500), face('IBM Plex Sans', 'ibm-plex-sans.woff2', '100 700'),
 ].join('') + '</style>';
-const pub = base.replace(FONTS, () => selfHosted).replace('<!--__FONTS_NOTE__-->', ' Fonts are served from this site, so no other company is contacted.');
+const pub = base.replace(FONTS, () => selfHosted).replace('<!--__FONTS_NOTE__-->', () => ' Fonts are served from this site, so no other company is contacted.' + ANALYTICS_NOTE);
 const full = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">' +
-  '<style>[hidden]{display:none!important}body{margin:0}</style></head><body>' + pub + '</body></html>';
+  '<style>[hidden]{display:none!important}body{margin:0}</style>' + ANALYTICS_TAG + '</head><body>' + pub + '</body></html>';
 // site/preview.html is the same page for local preview (build/serve.js serves site/, fonts included).
 fs.writeFileSync(path.join(ROOT, 'site', 'preview.html'), full);
 fs.mkdirSync(path.join(ROOT, 'public', 'fonts'), { recursive: true });

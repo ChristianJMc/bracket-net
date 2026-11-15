@@ -165,9 +165,9 @@ footer strong { color: var(--ink); font-weight: 600; }
   <div class="wrap bar">
     <div class="brand"><h1>Bracket<b>Net</b></h1><span>NCAA men's tournament forecasts, tested on every season since 2012</span></div>
     <nav role="tablist" aria-label="Views">
-      <button role="tab" id="tab-bracket" data-view="bracket" aria-selected="true">Bracket</button>
-      <button role="tab" id="tab-matchup" data-view="matchup" aria-selected="false">Matchup</button>
-      <button role="tab" id="tab-model" data-view="model" aria-selected="false">Model</button>
+      <button role="tab" id="tab-bracket" data-track="feature:view-bracket" data-view="bracket" aria-selected="true">Bracket</button>
+      <button role="tab" id="tab-matchup" data-track="feature:view-matchup" data-view="matchup" aria-selected="false">Matchup</button>
+      <button role="tab" id="tab-model" data-track="feature:view-model" data-view="model" aria-selected="false">Model</button>
     </nav>
   </div>
 </header>
@@ -194,8 +194,8 @@ footer strong { color: var(--ink); font-weight: 600; }
       <div class="panel-head">
         <h3>Bracket</h3>
         <div class="seg" role="group" aria-label="Bracket mode">
-          <button type="button" id="mode-model" aria-pressed="true">Model's picks</button>
-          <button type="button" id="mode-actual" aria-pressed="false">What happened</button>
+          <button type="button" id="mode-model" data-track="feature:mode-model" aria-pressed="true">Model's picks</button>
+          <button type="button" id="mode-actual" data-track="feature:mode-actual" aria-pressed="false">What happened</button>
         </div>
       </div>
       <div class="bracket-controls"><div class="tabs" id="region-tabs"></div></div>

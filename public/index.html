@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><style>[hidden]{display:none!important}body{margin:0}</style></head><body><title>Bracket Net</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><style>[hidden]{display:none!important}body{margin:0}</style><script src="/analytics/a-1.js" defer data-project="bracket-net" data-endpoint="https://christian-mcclellan.vercel.app/api" data-production-host="bracket-net.vercel.app" data-privacy-url="https://christian-mcclellan.vercel.app/privacy"></script></head><body><title>Bracket Net</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <style>@font-face{font-family:"Barlow Condensed";src:url("/fonts/barlow-condensed-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:"Barlow Condensed";src:url("/fonts/barlow-condensed-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}@font-face{font-family:"Barlow Condensed";src:url("/fonts/barlow-condensed-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"IBM Plex Mono";src:url("/fonts/ibm-plex-mono-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"IBM Plex Mono";src:url("/fonts/ibm-plex-mono-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:"IBM Plex Sans";src:url("/fonts/ibm-plex-sans.woff2") format("woff2");font-weight:100 700;font-style:normal;font-display:swap}</style>
 <style>
@@ -163,9 +163,9 @@ footer strong { color: var(--ink); font-weight: 600; }
   <div class="wrap bar">
     <div class="brand"><h1>Bracket<b>Net</b></h1><span>NCAA men's tournament forecasts, tested on every season since 2012</span></div>
     <nav role="tablist" aria-label="Views">
-      <button role="tab" id="tab-bracket" data-view="bracket" aria-selected="true">Bracket</button>
-      <button role="tab" id="tab-matchup" data-view="matchup" aria-selected="false">Matchup</button>
-      <button role="tab" id="tab-model" data-view="model" aria-selected="false">Model</button>
+      <button role="tab" id="tab-bracket" data-track="feature:view-bracket" data-view="bracket" aria-selected="true">Bracket</button>
+      <button role="tab" id="tab-matchup" data-track="feature:view-matchup" data-view="matchup" aria-selected="false">Matchup</button>
+      <button role="tab" id="tab-model" data-track="feature:view-model" data-view="model" aria-selected="false">Model</button>
     </nav>
   </div>
 </header>
@@ -192,8 +192,8 @@ footer strong { color: var(--ink); font-weight: 600; }
       <div class="panel-head">
         <h3>Bracket</h3>
         <div class="seg" role="group" aria-label="Bracket mode">
-          <button type="button" id="mode-model" aria-pressed="true">Model's picks</button>
-          <button type="button" id="mode-actual" aria-pressed="false">What happened</button>
+          <button type="button" id="mode-model" data-track="feature:mode-model" aria-pressed="true">Model's picks</button>
+          <button type="button" id="mode-actual" data-track="feature:mode-actual" aria-pressed="false">What happened</button>
         </div>
       </div>
       <div class="bracket-controls"><div class="tabs" id="region-tabs"></div></div>
@@ -347,7 +347,7 @@ footer strong { color: var(--ink); font-weight: 600; }
 <footer><div class="wrap foot">
   <p>Bracket Net is an independent model and is not affiliated with the NCAA. Probabilities describe uncertainty; they are not guarantees. Not betting advice.</p>
   <p><strong>How AI is used.</strong> The forecasts come from statistical models trained on past box scores, not from a generative AI chatbot. A separate step can use Claude (Anthropic) to turn public game coverage into structured notes, such as who was injured. That step runs offline, only when the site's owner starts it, and its inputs are off by default, so it doesn't affect the forecasts shown here.</p>
-  <p><strong>Privacy.</strong> This site has no accounts or cookies, and nothing you choose here is sent anywhere. Your browser remembers the last season you viewed, on your device only. Like any website, the host receives standard request logs. Fonts are served from this site, so no other company is contacted.</p>
+  <p><strong>Privacy.</strong> This site has no accounts or cookies, and nothing you choose here is sent anywhere. Your browser remembers the last season you viewed, on your device only. Like any website, the host receives standard request logs. Fonts are served from this site, so no other company is contacted. It counts page views, active time, which views you open, errors and approximate location with the developer's cookie-free analytics (no ID that follows you between visits; kept 90 days). Visitors in the EEA, UK and Switzerland are asked first; Global Privacy Control turns it off. <a href="https://christian-mcclellan.vercel.app/privacy" data-cma-preferences>Privacy choices</a></p>
 </div></footer>
 <div id="tip" hidden></div>
 
